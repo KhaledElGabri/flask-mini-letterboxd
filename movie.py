@@ -30,6 +30,7 @@ class Movie:
             return (self.description[:length] + "...") if len(self.description) > length else self.description
         return ""
 
+
     # add a review
     def add_review(self, user_id, username, text):
         review = {
@@ -41,6 +42,26 @@ class Movie:
         }
         self.reviews.append(review)
         return True
+
+
+    # add a rating
+    def add_rating(self, user_id, rating):
+        self.user_ratings[user_id] = rating
+        self._update_average_rating()
+
+        for review in self.reviews:
+            if review['user_id'] == user_id:
+                review['rating'] = rating
+                break
+        return True
+
+
+    # update average rating
+    def _update_average_rating(self):
+        if not self.user_ratings:
+            self.rating = None
+        else:
+            self.rating = sum(self.user_ratings.values()) / len(self.user_ratings)
 
 
     # convert movie object to dict (Serialization)
