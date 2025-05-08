@@ -34,6 +34,18 @@ class User:
         return self.username
 
 
+    # mark movie as watched
+    def mark_as_watched(self, movie_id):
+        if movie_id not in self.watched:
+            self.watched.append(movie_id)
+        if movie_id in self.watchlist:
+            self.watchlist.remove(movie_id)
+
+
+    # unmark movie as watched
+    def unmark_as_watched(self, movie_id):
+        if movie_id in self.watched:
+            self.watched.remove(movie_id)
 
 
     # convert user object to dict (Serialization)
