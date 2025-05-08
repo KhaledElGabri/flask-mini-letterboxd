@@ -38,8 +38,8 @@ class User:
     def mark_as_watched(self, movie_id):
         if movie_id not in self.watched:
             self.watched.append(movie_id)
-        if movie_id in self.watchlist:
-            self.watchlist.remove(movie_id)
+        # if movie_id in self.watchlist:
+        #     self.watchlist.remove(movie_id)
 
 
     # unmark movie as watched
@@ -56,7 +56,7 @@ class User:
             'password': self.password,
             'profile_picture_url': self.profile_picture_url,
             'joined_on': self.joined_on,
-            'watchlist': self.watchlist,
+            # 'watchlist': self.watchlist,
             'watched': self.watched
         }
 
