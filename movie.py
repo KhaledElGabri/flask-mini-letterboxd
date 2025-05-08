@@ -64,6 +64,24 @@ class Movie:
             self.rating = sum(self.user_ratings.values()) / len(self.user_ratings)
 
 
+    # update a review
+    def update_review(self, user_id, new_text=None, new_rating=None):
+        for review in self.reviews:
+            if review['user_id'] == user_id:
+                if new_text is not None:
+                    review['text'] = new_text
+
+                # update rating
+                if new_rating is not None:
+                    review['rating'] = new_rating
+                    self.user_ratings[user_id] = new_rating
+                    self._update_average_rating()
+
+                return True
+        return False
+
+
+
     # convert movie object to dict (Serialization)
     def to_dict(self):
         return {
