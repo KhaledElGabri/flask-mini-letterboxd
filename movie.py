@@ -30,6 +30,18 @@ class Movie:
             return (self.description[:length] + "...") if len(self.description) > length else self.description
         return ""
 
+    # add a review
+    def add_review(self, user_id, username, text):
+        review = {
+            'user_id': user_id,
+            'username': username,
+            'text': text,
+            'rating': None,
+            'created_at': datetime.now().isoformat()
+        }
+        self.reviews.append(review)
+        return True
+
 
     # convert movie object to dict (Serialization)
     def to_dict(self):
