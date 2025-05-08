@@ -81,6 +81,22 @@ class Movie:
         return False
 
 
+    # delete a review
+    def delete_review(self, user_id):
+        for i, review in enumerate(self.reviews):
+            if review['user_id'] == user_id:
+                self.reviews.pop(i)
+
+                # remove rating if exists
+                if user_id in self.user_ratings:
+                    del self.user_ratings[user_id]
+                    self._update_average_rating()
+
+                return True
+        return False
+
+
+
 
     # convert movie object to dict (Serialization)
     def to_dict(self):
