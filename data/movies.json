@@ -1,0 +1,123 @@
+{
+  "1": {
+    "movie_id": "1",
+    "title": "Heat",
+    "director": "Michael Mann",
+    "year": 1995,
+    "rating": null,
+    "description": "A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BZDgzZDkzNjQtZTVmMC00ZGYyLTg1NTMtMzVjMTRlOWVkNGE2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "2": {
+    "movie_id": "2",
+    "title": "Nightcrawler",
+    "director": "Dan Gilroy",
+    "year": 2014,
+    "rating": null,
+    "description": "When Louis Bloom, a con man desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNzY2Nl5BMl5BanBnXkFtZTgwNzE2NzMxMzE@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "3": {
+    "movie_id": "3",
+    "title": "The Godfather",
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "rating": null,
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "4": {
+    "movie_id": "4",
+    "title": "Fight Club",
+    "director": "David Fincher",
+    "year": 1999,
+    "rating": null,
+    "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "5": {
+    "movie_id": "5",
+    "title": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "year": 2008,
+    "rating": null,
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "6": {
+    "movie_id": "6",
+    "title": "Drive",
+    "director": "Nicolas Winding Refn",
+    "year": 2011,
+    "rating": null,
+    "description": "A mysterious Hollywood stuntman and mechanic moonlights as a getaway driver and finds himself in trouble when he helps out his neighbor.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMjA4NzY1NDAyNl5BMl5BanBnXkFtZTcwNjM4MjM3NQ@@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "7": {
+    "movie_id": "7",
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "year": 1994,
+    "rating": null,
+    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "8": {
+    "movie_id": "8",
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "rating": null,
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "9": {
+    "movie_id": "9",
+    "title": "The Matrix",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "year": 1999,
+    "rating": null,
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "10": {
+    "movie_id": "10",
+    "title": "Goodfellas",
+    "director": "Martin Scorsese",
+    "year": 1990,
+    "rating": null,
+    "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  },
+  "11": {
+    "movie_id": "11",
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
+    "year": 2014,
+    "rating": null,
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "poster_url": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "reviews": [],
+    "user_ratings": {}
+  }
+}
