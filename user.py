@@ -29,6 +29,13 @@ class User:
         return self.password == attempt
 
 
+    # get user profile link
+    def get_profile_link(self):
+        return self.username
+
+
+
+
     # convert user object to dict (Serialization)
     def to_dict(self):
         return {
