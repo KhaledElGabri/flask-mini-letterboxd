@@ -1,4 +1,3 @@
-import uuid
 from datetime import datetime
 
 
@@ -8,7 +7,7 @@ class User:
     """
 
     def __init__(self, username, password, user_id=None, profile_picture_url="", joined_on=None, watched=None):
-        self.user_id = user_id if user_id else str(uuid.uuid4())
+        self.user_id = user_id
         self.username = username
         self.password = password
         self.profile_picture_url = profile_picture_url
@@ -49,7 +48,7 @@ class User:
     # convert user object to dict (Serialization)
     def to_dict(self):
         return {
-            'user_id': self.user_id,
+            'user_id': self.username, # saves the username as id temporary
             'username': self.username,
             'password': self.password,
             'profile_picture_url': self.profile_picture_url,
@@ -62,8 +61,9 @@ class User:
     # create a user object from dict data (Deserialization)
     @classmethod
     def from_dict(cls, data):
+
         joined_str = data.get('joined_on')
-        joined_date = datetime.date.fromisoformat(joined_str) if joined_str else
+        joined_date = datetime.date.fromisoformat(joined_str) if joined_str else None
 
         user = cls(
             username=data['username'],
