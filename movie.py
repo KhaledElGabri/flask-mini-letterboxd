@@ -1,4 +1,3 @@
-import uuid
 from datetime import datetime
 
 
@@ -7,16 +6,16 @@ class Movie:
     Movie Details
     """
 
-    def __init__(self, title, director, year, movie_id=None, rating=None, description="", poster_url=""):
-        self.movie_id = movie_id or str(uuid.uuid4())
+    def __init__(self, title, director, year, movie_id, rating, description, poster_url, reviews=None,user_ratings=None):
+        self.movie_id = movie_id
         self.title = title
         self.director = director
         self.year = int(year) if year else None
         self.rating = rating
         self.description = description
         self.poster_url = poster_url
-        self.reviews = []
-        self.user_ratings = {}
+        self.reviews = reviews if reviews is not None else []
+        self.user_ratings = user_ratings if user_ratings is not None else {}
 
 
     # display the movie info
@@ -116,15 +115,14 @@ class Movie:
     # create a Movie object from dict data (Deserialization)
     @classmethod
     def from_dict(cls, data):
-        movie = cls(
+        return cls(
             movie_id=data.get('movie_id'),
-            title=data.get('title', ''),
-            director=data.get('director', ''),
+            title=data.get('title'),
+            director=data.get('director'),
             year=data.get('year'),
             rating=data.get('rating'),
-            description=data.get('description', ''),
-            poster_url=data.get('poster_url', '')
+            description=data.get('description'),
+            poster_url=data.get('poster_url'),
+            reviews=data.get('reviews', []),
+            user_ratings=data.get('user_ratings', {})
         )
-        movie.reviews = data.get('reviews', [])
-        movie.user_ratings = data.get('user_ratings', {})
-        return movie
