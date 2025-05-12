@@ -12,7 +12,7 @@ class User:
         self.username = username
         self.password = password
         self.profile_picture_url = profile_picture_url
-        self.joined_on = joined_on or datetime.now().isoformat()
+        self.joined_on = joined_on if joined_on else datetime.date.today()
         self.watched = watched if watched is not None else []
 
 
@@ -53,21 +53,24 @@ class User:
             'username': self.username,
             'password': self.password,
             'profile_picture_url': self.profile_picture_url,
-            'joined_on': self.joined_on,
+            'joined_on': self.joined_on.isoformat() if isinstance(self.joined_on, (datetime.date, datetime.datetime)) else self.joined_on,
             # 'watchlist': self.watchlist,
-            'watched': self.watched
+            # 'watched': self.watched
         }
 
 
     # create a user object from dict data (Deserialization)
     @classmethod
     def from_dict(cls, data):
+        joined_str = data.get('joined_on')
+        joined_date = datetime.date.fromisoformat(joined_str) if joined_str else
+
         user = cls(
             username=data['username'],
             password=data.get('password'),
             profile_picture_url=data.get('profile_picture_url', ""),
             user_id=data.get('user_id'),
-            joined_on=data.get('joined_on'),
+            joined_on=joined_date,
             watched=data.get('watched')
         )
         user.password = data['password']
