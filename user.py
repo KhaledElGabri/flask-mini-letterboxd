@@ -21,9 +21,9 @@ class User:
 
 
     # verifying user password
-    def verify_password(self, pass_attempt):
-        attempt = self._hash_password(pass_attempt)
-        return self.password == attempt
+    # def verify_password(self, pass_attempt):
+    #     attempt = self._hash_password(pass_attempt)
+    #     return self.password == attempt
 
 
     # get user profile link
@@ -66,10 +66,10 @@ class User:
         joined_date = datetime.date.fromisoformat(joined_str) if joined_str else None
 
         user = cls(
-            username=data['username'],
-            password=data.get('password'),
-            profile_picture_url=data.get('profile_picture_url', ""),
             user_id=data.get('user_id'),
+            username=data.get('username'),
+            password=data.get('password'),
+            profile_picture_url=data.get('profile_picture_url'),
             joined_on=joined_date,
             watched=data.get('watched')
         )
