@@ -1,57 +1,56 @@
 import json
-from movie import Movie
+# from movie import Movie
 from user import User
-import os
+# import os
 
-DATA_FILE = "data.json"  # save user data file
-MOVIES_DATA_FILE = "data/movies.json"  # pre-populated movies file
+MOVIES_FILE = "data/movies.json"  # pre-populated movies file
+USERS_FILE = "data/users.json" # users file
 
-def load_data():
-    movies = _load_movies()
-    users = _load_users()
-    return movies, users
 
-def _load_movies():
+# loads movie data
+def load_movies():
     try:
-        with open(MOVIES_DATA_FILE, 'r') as f:
-            movie_data = json.load(f)
-            # Assuming your movies.json is a dictionary where keys are movie IDs
-            movies = [Movie.from_dict(data) for data in movie_data.values()]
-        return movies
+        with open(MOVIES_FILE, "r") as f:
+            return json.load(f)
     except FileNotFoundError:
-        print(f"Movies data file '{MOVIES_DATA_FILE}' not found. Starting with no movies.")
+        print("Not Found")
         return []
-    except json.JSONDecodeError:
-        print(f"Error decoding JSON from '{MOVIES_DATA_FILE}'. Starting with no movies.")
-        return []
-    except Exception as e:
-        print(f"An unexpected error occurred while loading movies: {e}. Starting with no movies.")
+    except json.JSONDecodeError as e:
+        print(f"JSONDecodeError: {e}")
         return []
 
-def _load_users():
+
+
+# saves movie data
+def save_movies(movies):
+    pass
+
+def load_users():
     try:
-        with open(DATA_FILE, 'r') as f:
-            data = json.load(f)
-            users = [User.from_dict(user_data) for user_data in data.get('users', [])]
-        return users
+        with open(USERS_FILE, "r") as f:
+            user_data = json.load(f)
+            # Convert dictionaries to User objects
+            users = [User.from_dict(data) for data in user_data]
+            return [user for user in users if user is not None]  # Filter out None values
     except FileNotFoundError:
-        print(f"Users data file '{DATA_FILE}' not found. Starting with no users.")
+        print(f"Users file '{USERS_FILE}' not found. Creating a new file.")
+        # Create empty file
+        with open(USERS_FILE, "w") as f:
+            f.write("[]")
         return []
-    except json.JSONDecodeError:
-        print(f"Error decoding JSON from '{DATA_FILE}'. Starting with no users.")
-        return []
-    except Exception as e:
-        print(f"An unexpected error occurred while loading users: {e}. Starting with no users.")
+    except json.JSONDecodeError as e:
+        print(f"JSONDecodeError: {e} - The file may be empty or contain invalid JSON")
+        # Initialize with empty array
+        with open(USERS_FILE, "w") as f:
+            f.write("[]")
         return []
 
-
-def save_data(users):
+# saves users data
+def save_users(users):
     try:
-        data = {
-            'users': [user.to_dict() for user in users]
-        }
-        with open(DATA_FILE, 'w') as f:
-            json.dump(data, f, indent=4)
-        print(f"User data saved successfully to '{DATA_FILE}'")
+        user_dicts = [user.to_dict() if isinstance(user, User) else user for user in users]
+        with open(USERS_FILE, "w") as f:
+            json.dump(user_dicts, f, indent=4)
+        print(f"Successfully saved {len(users)} users to {USERS_FILE}")
     except Exception as e:
-        print(f"Error saving user data to '{DATA_FILE}': {e}")
+        print(f"Error saving users: {e}")
