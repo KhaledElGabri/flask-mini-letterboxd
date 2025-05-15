@@ -45,6 +45,6 @@ def save_users(users):
         user_dicts = [user.to_dict() if isinstance(user, User) else user for user in users]
         with open(USERS_FILE, "w") as f:
             json.dump(user_dicts, f, indent=4)
-        print(f"Successfully saved {len(users)} users to {USERS_FILE}")
-    except Exception as e:
-        print(f"Error saving users: {e}")
+        print(f"successfully saved {len(users)} users to {USERS_FILE}")
+    except:
+        print(f"error saving users")
