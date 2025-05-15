@@ -30,3 +30,29 @@ def signup():
             return get_html("login")
     else:
         return get_html("signup")
+
+
+# login user
+@user_bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        users = load_users()
+        for user in users:
+            if user.username == username and user.password == password:
+                session['username'] = username
+                return get_html("index")
+        return "Invalid username or password."
+    else:
+        return get_html("login")
+
+
+# logout user
+@user_bp.route('/logout')
+def logout():
+    if 'username' in session:
+        del session['username']
+        return get_html("index")
+    else:
+        return "You are not logged in."
