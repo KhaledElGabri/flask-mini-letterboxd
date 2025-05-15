@@ -1,42 +1,32 @@
 from flask import Blueprint, request, jsonify
-from data_service import load_data, save_data
+from data_service import load_users, save_users
 from user import User
+from utils import get_html
 
-user_bp = Blueprint('user_routes', __name__, url_prefix='/users')
+user_bp = Blueprint('user', __name__, url_prefix='/user')
 
-_, users = load_data()
+session = {} # in-memory session
+
 
 # register new user
-@user_bp.route('/register', methods=['POST'])
-def register_user():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
+@user_bp.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        users = load_users()
+        if any(user.username == username for user in users):
+            return "Username already exists. Please choose another."
+        else:
+            new_user = User(
+                username=username,
+                password=password,
+                profile_picture_url='/static/img/default_profile.png'
+            )
 
-    if not username or not password:
-        return jsonify({'error': 'Username and password are required'}), 400
-
-    # Check if username exists
-    for user in users:
-        if user.username == username:
-            return jsonify({'error': 'Username already exists'}), 409
-
-    new_user = User(username, password)
-    users.append(new_user)
-    save_data(users)
-
-    return jsonify({'message': 'User registered successfully', 'user_id': new_user.user_id})
-
-
-# login user
-@user_bp.route('/login', methods=['POST'])
-def login_user():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
-
-    for user in users:
-        if user.username == username and user.verify_password(password):
-            return jsonify({'message': 'Login successful', 'user_id': user.user_id})
-
-    return jsonify({'error': 'Invalid credentials'}), 401
+            users.append(new_user)
+            save_users(users)
+            session['username'] = username
+            return get_html("login")
+    else:
+        return get_html("signup")

@@ -1,4 +1,5 @@
-from datetime import datetime
+import datetime
+
 
 
 class User:
@@ -6,24 +7,18 @@ class User:
     User Details
     """
 
-    def __init__(self, username, password, user_id=None, profile_picture_url="", joined_on=None, watched=None):
+    def __init__(self, username, password, user_id=None, profile_picture_url="", joined_on=None, movie_watched=None):
         self.user_id = user_id
         self.username = username
         self.password = password
         self.profile_picture_url = profile_picture_url
         self.joined_on = joined_on if joined_on else datetime.date.today()
-        self.watched = watched if watched is not None else []
+        self.movie_watched = movie_watched if movie_watched is not None else {}
 
 
     # to be implemented
     def _hash_password(self, password):
         pass
-
-
-    # verifying user password
-    # def verify_password(self, pass_attempt):
-    #     attempt = self._hash_password(pass_attempt)
-    #     return self.password == attempt
 
 
     # get user profile link
@@ -32,17 +27,14 @@ class User:
 
 
     # mark movie as watched
-    def mark_as_watched(self, movie_id):
-        if movie_id not in self.watched:
-            self.watched.append(movie_id)
-        # if movie_id in self.watchlist:
-        #     self.watchlist.remove(movie_id)
+    def marked_movies(self, movie_id, movie_title):
+        self.movie_watched[movie_id] = movie_title
 
 
     # unmark movie as watched
-    def unmark_as_watched(self, movie_id):
-        if movie_id in self.watched:
-            self.watched.remove(movie_id)
+    def unmarked_movies(self, movie_id):
+        if movie_id in self.movie_watched:
+            del self.movie_watched[movie_id]
 
 
     # convert user object to dict (Serialization)
@@ -53,25 +45,24 @@ class User:
             'password': self.password,
             'profile_picture_url': self.profile_picture_url,
             'joined_on': self.joined_on.isoformat() if isinstance(self.joined_on, (datetime.date, datetime.datetime)) else self.joined_on,
-            # 'watchlist': self.watchlist,
-            # 'watched': self.watched
+            'movie_watched': self.movie_watched
         }
 
 
     # create a user object from dict data (Deserialization)
     @classmethod
     def from_dict(cls, data):
+        if 'username' not in data:
+            print("username key error")
+            return None
 
         joined_str = data.get('joined_on')
         joined_date = datetime.date.fromisoformat(joined_str) if joined_str else None
-
-        user = cls(
+        return cls(
             user_id=data.get('user_id'),
             username=data.get('username'),
             password=data.get('password'),
             profile_picture_url=data.get('profile_picture_url'),
             joined_on=joined_date,
-            watched=data.get('watched')
+            movie_watched=data.get('movie_watched', {})
         )
-        user.password = data['password']
-        return user
