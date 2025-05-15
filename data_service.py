@@ -12,11 +12,8 @@ def load_movies():
     try:
         with open(MOVIES_FILE, "r") as f:
             return json.load(f)
-    except FileNotFoundError:
-        print("Not Found")
-        return []
-    except json.JSONDecodeError as e:
-        print(f"JSONDecodeError: {e}")
+    except:
+        print(f"Error loading movies from {MOVIES_FILE}")
         return []
 
 
