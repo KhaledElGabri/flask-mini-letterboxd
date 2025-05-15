@@ -1,11 +1,9 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, session, redirect, url_for
 from data_service import load_users, save_users
 from user import User
 from utils import get_html
 
 user_bp = Blueprint('user', __name__, url_prefix='/user')
-
-session = {} # in-memory session
 
 
 # register new user
@@ -15,19 +13,30 @@ def signup():
         username = request.form['username']
         password = request.form['password']
         users = load_users()
-        if any(user.username == username for user in users):
-            return "Username already exists. Please choose another."
+
+        username_exist = False
+        for user in users:
+            if user.username == username:
+                username_exist = True
+                break
+
+        if username_exist:
+            print(f"username '{username}' exists")
+            return get_html("signup")
         else:
+            new_user_id = User.generate_new_id(users)
             new_user = User(
+                user_id=new_user_id,
                 username=username,
                 password=password,
                 profile_picture_url='/static/img/default_profile.png'
             )
-
             users.append(new_user)
             save_users(users)
+
             session['username'] = username
-            return get_html("login")
+            session.permanent = True
+            return redirect(url_for('user.profile'))
     else:
         return get_html("signup")
 
@@ -39,11 +48,15 @@ def login():
         username = request.form['username']
         password = request.form['password']
         users = load_users()
+
         for user in users:
             if user.username == username and user.password == password:
                 session['username'] = username
-                return get_html("index")
-        return "Invalid username or password."
+                session.permanent = True
+                return redirect(url_for('user.profile'))
+
+        print(f"invalid login for username -> {username}")
+        return get_html("login")
     else:
         return get_html("login")
 
@@ -51,8 +64,12 @@ def login():
 # logout user
 @user_bp.route('/logout')
 def logout():
-    if 'username' in session:
-        del session['username']
-        return get_html("index")
-    else:
-        return "You are not logged in."
+    session.pop('username', None)
+    return redirect(url_for('home'))
+
+
+
+# user profile
+@user_bp.route('/profile')
+def profile():
+    pass
