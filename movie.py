@@ -1,4 +1,3 @@
-from datetime import datetime
 
 
 class Movie:
@@ -20,79 +19,33 @@ class Movie:
 
     # display the movie info
     def display_info(self):
-        return f"{self.title} directed by {self.director} ({self.year if self.year else 'N/A'})"
+        pass
 
 
     # movie short description.
     def get_short_description(self, length=100):
-        if self.description:
-            return (self.description[:length] + "...") if len(self.description) > length else self.description
-        return ""
-
+        pass
 
     # add a review
     def add_review(self, user_id, username, text):
-        review = {
-            'user_id': user_id,
-            'username': username,
-            'text': text,
-            'rating': None,
-            'created_at': datetime.now().isoformat()
-        }
-        self.reviews.append(review)
-        return True
-
+        pass
 
     # add a rating
     def add_rating(self, user_id, rating):
-        self.user_ratings[user_id] = rating
-        self._update_average_rating()
-
-        for review in self.reviews:
-            if review['user_id'] == user_id:
-                review['rating'] = rating
-                break
-        return True
-
+        pass
 
     # update average rating
     def _update_average_rating(self):
-        if not self.user_ratings:
-            self.rating = None
-        else:
-            self.rating = sum(self.user_ratings.values()) / len(self.user_ratings)
-
+        pass
 
     # update a review
     def update_review(self, user_id, new_text=None, new_rating=None):
-        for review in self.reviews:
-            if review['user_id'] == user_id:
-                if new_text is not None:
-                    review['text'] = new_text
-
-                # update rating
-                if new_rating is not None:
-                    review['rating'] = new_rating
-                    self.user_ratings[user_id] = new_rating
-                    self._update_average_rating()
-
-                return True
-        return False
+        pass
 
 
     # delete a review
     def delete_review(self, user_id):
-        for i, review in enumerate(self.reviews):
-            if review['user_id'] == user_id:
-                self.reviews.pop(i)
-
-                # remove rating if exists
-                if user_id in self.user_ratings:
-                    del self.user_ratings[user_id]
-                    self._update_average_rating()
-
-                return True
-        return False
+        pass
 
 
 
@@ -107,8 +60,7 @@ class Movie:
             'rating': self.rating,
             'description': self.description,
             'poster_url': self.poster_url,
-            'reviews': self.reviews,
-            'user_ratings': self.user_ratings
+            'reviews': self.reviews
         }
 
 
