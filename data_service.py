@@ -26,18 +26,15 @@ def load_users():
     try:
         with open(USERS_FILE, "r") as f:
             user_data = json.load(f)
-            # Convert dictionaries to User objects
-            users = [User.from_dict(data) for data in user_data]
-            return [user for user in users if user is not None]  # Filter out None values
-    except FileNotFoundError:
-        print(f"Users file '{USERS_FILE}' not found. Creating a new file.")
-        # Create empty file
-        with open(USERS_FILE, "w") as f:
-            f.write("[]")
-        return []
-    except json.JSONDecodeError as e:
-        print(f"JSONDecodeError: {e} - The file may be empty or contain invalid JSON")
-        # Initialize with empty array
+        users = []
+        for data in user_data:
+            user = User.from_dict(data)
+            if user:
+                users.append(user)
+        print(f"successfully loaded {len(users)} users from {USERS_FILE}")
+        return users
+    except:
+        print(f"error loading users")
         with open(USERS_FILE, "w") as f:
             f.write("[]")
         return []
