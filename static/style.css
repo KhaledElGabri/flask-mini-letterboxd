@@ -65,3 +65,30 @@ h1, h2 {
     border-radius: 5px;
     object-fit: cover;
 }
+
+.navigation-back-home {
+    margin: 20px auto;
+}
+
+.movie-content {
+    display: flex;
+    align-items: center; /* vertically center poster and info */
+    gap: 30px;
+}
+
+.poster-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-poster-detail {
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    max-width: 800px;
+}
