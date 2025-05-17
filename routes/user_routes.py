@@ -2,8 +2,25 @@ from flask import Blueprint, request, session, redirect, url_for
 from data_service import load_users, save_users
 from user import User
 from utils import get_html
+import datetime
 
 user_bp = Blueprint('user', __name__, url_prefix='/user')
+
+
+
+# validate the password
+def validate_pass(password):
+    if len(password) < 6:
+        return "Password must be at least 6 characters"
+
+    if not any(char.isdigit() for char in password):
+        return "Password must contain at least one number"
+
+    special_chars = "!@#$%^&*()_+-=[]{}|;:,.<>?/"
+    if not any(char in special_chars for char in password):
+        return "Password must contain at least one special character"
+
+    return None
 
 
 # register new user
@@ -12,8 +29,15 @@ def signup():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        users = load_users()
 
+        pass_err = validate_pass(password)
+        if pass_err:
+            signup_html = get_html("signup")
+            signup_html = signup_html.replace('<p id="password-error" class="error-message" style="color: red; display: none;">',
+                                              f'<p id="password-error" class="error-message" style="color: red;">')
+            return signup_html
+
+        users = load_users()
         username_exist = False
         for user in users:
             if user.username == username:
@@ -21,10 +45,11 @@ def signup():
                 break
 
         if username_exist:
-            print(f"username '{username}' exists")
+            print(f"Username '{username}' already exists")
             return get_html("signup")
         else:
             new_user_id = User.generate_new_id(users)
+
             new_user = User(
                 user_id=new_user_id,
                 username=username,
@@ -53,10 +78,24 @@ def login():
             if user.username == username and user.password == password:
                 session['username'] = username
                 session.permanent = True
-                return redirect(url_for('user.profile'))
+                return f"""
+                <script>
+                    localStorage.setItem("username", "{username}");
+                    window.location.href = "{url_for('home')}";
+                </script>
+                """
 
-        print(f"invalid login for username -> {username}")
-        return get_html("login")
+        login_html = get_html("login")
+        login_html = login_html.replace(
+            '<p id="login-error" class="error-message" style="color: red; display: none;">',
+            '<p id="login-error" class="error-message" style="color: red;">'
+        )
+        login_html = login_html.replace(
+            'Invalid username or password.',
+            'Invalid username or password. Please try again.'
+        )
+        return login_html
+
     else:
         return get_html("login")
 
@@ -64,9 +103,15 @@ def login():
 # logout user
 @user_bp.route('/logout')
 def logout():
-    session.pop('username', None)
-    return redirect(url_for('home'))
+    username = session.get('username')
+    session.clear()
 
+    return """
+    <script>
+        localStorage.removeItem("username");
+        window.location.replace("/");
+    </script>
+    """
 
 
 # user profile
