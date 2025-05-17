@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
-<h1>Sign Up</h1>
-<form action="/user/signup" method="POST">
+<h1 style="text-align: center; color: #999;">Sign Up</h1>
+<form class="auth-form" action="/user/signup" method="POST" onsubmit="return validateForm()">
     <div>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
@@ -14,9 +14,39 @@
     <div>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
+        <p id="password-error" class="error-message" style="color: red; display: none;">Password must be at least 6 characters with at least 1 number and 1 special character.</p>
     </div>
-    <button type="submit">Sign Up</button>
+    <button type="submit" class="signup-btn">Sign Up</button>
 </form>
-<p>Already have an account? <a href="/user/login">Log In</a></p>
+<p style="text-align: center;">Already have an account? <a href="/user/login" class="log-in">Log In</a></p>
+
+<script>
+    function validateForm() {
+        const password = document.getElementById('password').value;
+        const errorElement = document.getElementById('password-error');
+
+        // Check password length
+        if (password.length < 6) {
+            errorElement.style.display = 'block';
+            return false;
+        }
+
+        // Check for at least one number
+        if (!/\d/.test(password)) {
+            errorElement.style.display = 'block';
+            return false;
+        }
+
+        // Check for at least one special character
+        if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+            errorElement.style.display = 'block';
+            return false;
+        }
+
+        // If we get here, validation passed
+        errorElement.style.display = 'none';
+        return true;
+    }
+</script>
 </body>
 </html>
