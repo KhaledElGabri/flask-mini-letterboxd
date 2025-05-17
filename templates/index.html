@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<header class="nav-header">
-    <h1>Mini-Letterboxd</h1>
+<header class="nav">
+    <h1><a href="/">Mini-Letterboxd</a></h1>
+    $$AUTH_LINKS$$
 </header>
 <div class="main-container">
     <div class="search-bar-container">
-        <form id="search-form">
+        <form class="search-form" action="/movies/search" method="GET">
             <div class="search-inputs">
-                <input type="text" id="search-bar" placeholder="What do you love to watch?">
+                <input type="text" id="search-bar" name="query" placeholder="What do you love to watch?">
                 <button type="submit">Search</button>
             </div>
         </form>
