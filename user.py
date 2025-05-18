@@ -1,7 +1,5 @@
 import datetime
 
-
-
 class User:
     """
     User Details
@@ -10,15 +8,24 @@ class User:
     def __init__(self, username, password, profile_picture_url, user_id=None, joined_on=None, movie_watched=None):
         self.user_id = user_id
         self.username = username
-        self.password = password
+        self.password = password if password.isdigit() else self._hash_password_FNV1a_64(password)
         self.profile_picture_url = profile_picture_url
         self.joined_on = joined_on if joined_on else datetime.date.today()
         self.movie_watched = movie_watched if movie_watched is not None else {}
 
 
-    # to be implemented
-    def _hash_password(self, password):
-        pass
+    # hashes the given password using FNV1a 64
+    def _hash_password_FNV1a_64(self, password):
+        FNV_OFFSET_BASIS = 14695981039346656037
+        FNV_PRIME = 1099511628211
+        data = password.encode('ascii')
+
+        hash_value = FNV_OFFSET_BASIS
+        for byte in data:
+            hash_value = hash_value ^ byte
+            hash_value = (hash_value * FNV_PRIME) & 0xFFFFFFFFFFFFFFFF
+
+        return str(hash_value)
 
     # mark movie as watched
     def marked_movies(self, movie_id, movie_title):
@@ -40,7 +47,6 @@ class User:
                     max_user_id = user_id_int
 
         return str(max_user_id + 1)
-
 
 
     # convert user object to dict (Serialization)
