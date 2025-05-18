@@ -24,7 +24,6 @@ def validate_pass(password):
 # register new user
 @user_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
-    print("Username fail to sign up")
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -44,10 +43,8 @@ def signup():
                 break
 
         if username_exist:
-            print(f"Username '{username}' already exists")
             return get_html("signup")
         else:
-            print(f"Username '{username}' fail to sign up")
             new_user_id = User.generate_new_id(users)
             new_user = User(
                 user_id=new_user_id,
@@ -55,6 +52,7 @@ def signup():
                 password=password,
                 profile_picture_url='/static/img/default_profile.png'
             )
+            
             users.append(new_user)
             save_users(users)
             user_logs(username, "created account")
@@ -62,8 +60,7 @@ def signup():
             session['username'] = username
             session.permanent = True
             return redirect(url_for('user.profile'))
-    else:
-        print("Username fail to sign up")
+            
     return get_html("signup")
 
 
@@ -79,10 +76,10 @@ def login():
             temp_user = User("temp", password, "")
             hashed_password = temp_user._hash_password_FNV1a_64(password)
 
-            if user.username == username and (user.password == hashed_password or user.password == password):
+            if user.username == username and user.password == hashed_password:
                 session['username'] = username
                 session.permanent = True
-                user_logs(username, "logged in") # log activity
+                user_logs(username, "logged in")
 
                 # set LocalStorage before redirect
                 return f"""
@@ -97,10 +94,12 @@ def login():
             '<p id="login-error" class="error-message" style="color: red; display: none;">',
             '<p id="login-error" class="error-message" style="color: red;">'
         )
+        
         login_html = login_html.replace(
             'Invalid username or password.',
             'Invalid username or password. Please try again.'
         )
+        
         return login_html
     else:
         return get_html("login")
@@ -112,7 +111,7 @@ def logout():
     username = session.get('username')
     if username:
         user_logs(username, "logged out")
-    session.clear()  # clear the entire session
+    session.clear() # clear entire session
 
     # clear LocalStorage before redirect
     return """
@@ -163,6 +162,8 @@ def find_user_by_username(username):
     return None
 
 
+
+# render the user profile info
 def render_user_profile(user):
     profile_html = get_html("profile")
 
@@ -181,7 +182,7 @@ def render_user_profile(user):
         '$$WATCHED_MOVIES$$': watched_movies_html
     }
 
-    for placeholder, value in replacements.items():
-        profile_html = profile_html.replace(placeholder, value)
+    for placeholder, val in replacements.items():
+        profile_html = profile_html.replace(placeholder, val)
 
     return profile_html
