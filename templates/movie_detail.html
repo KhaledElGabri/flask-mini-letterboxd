@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$$TITLE$$ - Mini Letterboxd</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/moviede,"tail.css">
 </head>
 <body>
-<div class="main">
-
+<div class="main-container">
     <div class="container">
-
-        <div class="navigation-back-home">
-            <a href="/">Back to Home</a>
+        <div>
+            <a href="/" class="back-to-home">Home</a>
         </div>
 
         <div class="movie-detail">
@@ -20,23 +19,37 @@
                 <div class="poster-container">
                     <img src="$$POSTER_URL$$" class="movie-poster-detail">
                 </div>
-
                 <div class="movie-info">
                     <h1>$$TITLE$$</h1>
-                    <p><strong>Director:</strong>$$DIRECTOR$$</p>
-                    <p><strong>Year:</strong>$$YEAR$$</p>
-                    <p><strong>Rating:</strong>$$RATING$$</p>
-                    <p><strong>Description:</strong>$$DESCRIPTION$$</p>
+                    <p><strong>Director:</strong> $$DIRECTOR$$</p>
+                    <p><strong>Year:</strong> $$YEAR$$</p>
+                    <p><strong>Rating:</strong> $$RATING$$</p>
+                    <p><strong>Description:</strong> $$DESCRIPTION$$</p>
 
                     <form class="watched-form" method="POST">
-                        <button type="submit" class="watched-button">$$MARK_AS_WATCHED$$</button>
+                        <button type="submit" class="watched-button" id="marked-watched">$$MARK_AS_WATCHED$$</button>
                     </form>
                 </div>
-
             </div>
+
+            <div class="review-section">
+                <div class="reviews-header">
+                    <h2>Reviews</h2>
+                </div>
+                <form class="review-form" method="POST" action="">
+                    <label>Write your review</label>
+                    <textarea class="review-area" name="review_text"
+                              placeholder="log your thoughts about this movie.." rows="5"></textarea>
+                    <button type="submit" class="log-review-btn">Log Review</button>
+                </form>
+
+                <div id="reviews-container">
+                    $$REVIEWS$$
+                </div>
+            </div>
+
         </div>
     </div>
-
 </div>
 </body>
 </html>

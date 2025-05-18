@@ -52,5 +52,10 @@ def home():
     return index_html
 
 
+# handle all not found pages
+@app.errorhandler(404)
+def page_not_found(e):
+    return get_html("not_found"), 404
+
 if __name__ == '__main__':
     app.run()

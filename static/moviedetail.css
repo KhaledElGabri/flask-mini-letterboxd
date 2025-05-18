@@ -1,0 +1,139 @@
+.main-container { display: flex; justify-content: center;}
+
+/* movie detail style */
+.container { max-width: 800px; }
+.movie-detail {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: #445566;
+  border-radius: 5px;
+}
+
+.movie-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.movie-poster-detail { max-width: 300px; border-radius: 10px;}
+
+/* watched btn */
+.watched-button {
+  background-color: slategrey;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 67px;
+  font-weight: bold;
+}
+.watched-button:hover { background-color: #00E054; }
+.watched-form { background: transparent; border: none; margin: 0; padding: 0;}
+
+/* reviews */
+.reviews-header h2 { text-align: center; font-size: 25px;}
+.review-section { margin-top: 35px;}
+
+/* user info in reviews */
+.username { color: #B8C4D2; font-size: 14px; }
+.user-style { color: #FFFFFF; font-weight: bold; font-size: 16px; }
+.date { color: #8D98A7; font-size: 12px; }
+
+.review-form {
+  background-color: #3A4450;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.review-area {
+  width: 97%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #566273;
+  background-color :#515151;
+  color: #e2e2e2;
+  margin-bottom: 12px;
+  margin-top: 15px;
+}
+
+#reviews-container { margin-top: 20px; }
+.review {
+  background-color: #3A4450;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.review-header {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-text {
+  color: #E2E2E2;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+textarea{resize: none;}
+
+.log-review-btn {
+  background-color: #00AC1C;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.log-review-btn:hover { background-color: #007916; }
+
+/* delete/edit/cancel btns */
+.del-button {
+  background-color: #E53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.del-button:hover { background-color: #C62828; }
+
+.edit-button {
+  background-color: #00AC1C;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.edit-button:hover { background-color: #49ba20;}
+
+.cancel-btn {
+  padding: 6px 5px;
+  background-color: #ed4b4b;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 3px;
+  font-size: smaller;
+}
+.cancel-btn:hover {background-color: #888;}
+
+/* no reviews style */
+.no-reviews {
+  color: #B8C4D2;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  background-color: #3A4450;
+  border-radius: 5px;
+}
