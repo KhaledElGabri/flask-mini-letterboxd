@@ -17,7 +17,7 @@ A web application that allows users to track movies they've watched and share re
 - [x] It is available on GitHub.
 - [x] It uses the Flask web framework.
 - [x] It uses at least one module from the Python Standard Library other than the random module.
-  - Module name: datetime, json
+  - Module name: datetime, json, os
 - [x] It contains at least one class written by you that has both properties and methods. It uses `__init__()` to let the class initialize the object's attributes (note that `__init__()` doesn't count as a method). This includes instantiating the class and using the methods in your app.
   - File name for the class definition: user.py
   - Line number(s) for the class definition: 3-11
