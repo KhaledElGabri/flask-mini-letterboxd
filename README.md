@@ -10,6 +10,7 @@ A web application that allows users to track movies they've watched and share re
 
 ## Prerequisites
 - Flask web framework
+- Html,Css and JavaScript
 - No additional modules needed beyond Python's standard library
 
 ## Project Checklist
