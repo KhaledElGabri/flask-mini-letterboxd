@@ -1,8 +1,8 @@
 from flask import Blueprint, request, session, redirect, url_for
-from data_service import load_users, save_users
+from data_service import load_users, save_users, user_logs
 from user import User
 from utils import get_html
-import datetime
+
 
 user_bp = Blueprint('user', __name__, url_prefix='/user')
 
@@ -49,7 +49,6 @@ def signup():
             return get_html("signup")
         else:
             new_user_id = User.generate_new_id(users)
-
             new_user = User(
                 user_id=new_user_id,
                 username=username,
@@ -57,8 +56,9 @@ def signup():
                 profile_picture_url='/static/img/default_profile.png'
             )
             users.append(new_user)
-            save_users(users)
 
+            save_users(users)
+            user_logs(username, "created account")
             session['username'] = username
             session.permanent = True
             return redirect(url_for('user.profile'))
@@ -75,9 +75,15 @@ def login():
         users = load_users()
 
         for user in users:
-            if user.username == username and user.password == password:
+            temp_user = User("temp", password, "")
+            hashed_password = temp_user._hash_password_FNV1a_64(password)
+
+            if user.username == username and (user.password == hashed_password or user.password == password):
                 session['username'] = username
                 session.permanent = True
+                user_logs(username, "logged in") # log activity
+
+                # set LocalStorage before redirect
                 return f"""
                 <script>
                     localStorage.setItem("username", "{username}");
@@ -95,7 +101,6 @@ def login():
             'Invalid username or password. Please try again.'
         )
         return login_html
-
     else:
         return get_html("login")
 
@@ -104,8 +109,11 @@ def login():
 @user_bp.route('/logout')
 def logout():
     username = session.get('username')
-    session.clear()
+    if username:
+        user_logs(username, "logged out")
+    session.clear()  # clear the entire session
 
+    # clear LocalStorage before redirect
     return """
     <script>
         localStorage.removeItem("username");

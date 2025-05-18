@@ -1,10 +1,10 @@
 import json
-# from movie import Movie
+import datetime
 from user import User
-# import os
 
 MOVIES_FILE = "data/movies.json"  # pre-populated movies file
 USERS_FILE = "data/users.json" # users file
+LOGS_FILE = "data/logs-users.txt" # logs file
 
 
 # loads movie data
@@ -13,14 +13,20 @@ def load_movies():
         with open(MOVIES_FILE, "r") as f:
             return json.load(f)
     except:
-        print(f"Error loading movies from {MOVIES_FILE}")
+        print("Error loading movies")
         return []
 
 
 
 # saves movie data
 def save_movies(movies):
-    pass
+    try:
+        with open(MOVIES_FILE, "w") as f:
+            json.dump(movies, f, indent=4)
+        print(f"successfully saved {len(movies)} movies to {MOVIES_FILE}")
+    except:
+        print("error saving movies")
+
 
 def load_users():
     try:
@@ -48,3 +54,13 @@ def save_users(users):
         print(f"successfully saved {len(users)} users to {USERS_FILE}")
     except:
         print(f"error saving users")
+
+# log user activity
+def user_logs(username, action):
+    try:
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log_entry = f"At [{timestamp}] the-username: {username}: {action}\n"
+        with open(LOGS_FILE, "a") as f:
+            f.write(log_entry)
+    except:
+        print("Error logging")
