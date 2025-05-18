@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/moviedetail.css">
+</head>
+<body>
+<div class="main-user-container">
+    <div class="user-container">
+        <div>
+            <a href="/" class="back-to-home">Home</a>
+        </div>
+        <br>
+
+        <div class="profile-container">
+            <div class="profile-info">
+                <div>
+                    <h2>$$USERNAME$$</h2>
+                    <p class="joined-date">Member since: $$JOINED_DATE$$</p>
+                    <p class="stats">Movies Watched: $$WATCHED_COUNT$$</p>
+                </div>
+                <img src="$$PROFILE_PIC$$" alt="Profile Picture" class="profile-picture">
+            </div>
+
+            <div class="profile-diary">
+                <div class="watched-movies">
+                    <h3>Diary</h3>
+                    <div id="watched-movies-list">
+                        $$WATCHED_MOVIES$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

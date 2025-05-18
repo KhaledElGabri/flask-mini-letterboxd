@@ -25,6 +25,21 @@ body {
 .nav h1 a { color: #e2e2e2; text-decoration: none;
 }
 
+/* welcome msg */
+.welcome-message {
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+    font-size: larger;
+}
+
+.welcome-message a {
+    color: #e2e2e2;
+    font-weight: bold;
+    font-style: italic;
+}
+.welcome-message a:hover { text-decoration: transparent; }
+
 a.log-in, a.sign-up, a.log-out {
     background-color: #00AC1C;
     color: white;
@@ -47,14 +62,7 @@ a.log-out:hover {
     background-color: #C62828;
 }
 
-
-.main-container {
-    margin: 20px auto;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-/* auth form */
+/* auth forms */
 form div { margin: 3px 0 19px 0;}
 
 .auth-form {
@@ -143,7 +151,7 @@ form div { margin: 3px 0 19px 0;}
     cursor: pointer;
 }
 
-/* Home Movie Grid */
+/* Home Movies Grid */
 #movie-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
@@ -185,13 +193,60 @@ form div { margin: 3px 0 19px 0;}
     background-color: #2C353F;
 }
 
+/* profile page */
+.main-user-container{
+    display: flex;
+    justify-content: center;
+}
+
+.user-container{
+    width: 500px;
+}
+
+.profile-container {
+    background-color: #445566;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    margin-left: 125px;
+}
+
+.profile-diary {
+    border-top: 1px solid #556677;
+    padding-top: 20px;
+}
+
+.movie-entry {
+    background-color: #556677;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.movie-entry a{
+    text-decoration: none;
+    color: #e2e2e2;
+    font-style: italic;
+}
 
 /* not found */
 .not-found-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     text-align: center;
     padding: 0 20px;
     margin-top: 50px;

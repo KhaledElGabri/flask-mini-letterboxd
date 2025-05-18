@@ -122,7 +122,65 @@ def logout():
     """
 
 
-# user profile
+# user profile functionalities
 @user_bp.route('/profile')
 def profile():
-    pass
+    if 'username' not in session:
+        return redirect(url_for('user.login'))
+
+    username = session['username']
+    user = find_user_by_username(username)
+
+    if not user:
+        not_found_html = get_html("not_found")
+        return not_found_html, 404
+
+    return render_user_profile(user)
+
+
+@user_bp.route('/profile/<user_id>')
+def user_profile_by_id(user_id):
+    users = load_users()
+    user = None
+    for usr in users:
+        if usr.user_id == user_id:
+            user = usr
+            break
+
+    if not user:
+        not_found_html = get_html("not_found")
+        return not_found_html, 404
+
+    return render_user_profile(user)
+
+
+def find_user_by_username(username):
+    users = load_users()
+    for user in users:
+        if user.username == username:
+            return user
+    return None
+
+
+def render_user_profile(user):
+    profile_html = get_html("profile")
+
+    watched_movies_html = ""
+    if user.movie_watched:
+        for movie_id, movie_title in user.movie_watched.items():
+            watched_movies_html += f'<div class="movie-entry"> <p>Watched <a href="/movies/{movie_id}">{movie_title}</a> </p> </div>'
+    else:
+        watched_movies_html = '<p class="no-movies-message">No movies watched yet.</p>'
+
+    replacements = {
+        '$$USERNAME$$': user.username,
+        '$$JOINED_DATE$$': user.joined_on.strftime("%B %d, %Y"),
+        '$$WATCHED_COUNT$$': str(len(user.movie_watched)),
+        '$$PROFILE_PIC$$': user.profile_picture_url,
+        '$$WATCHED_MOVIES$$': watched_movies_html
+    }
+
+    for placeholder, value in replacements.items():
+        profile_html = profile_html.replace(placeholder, value)
+
+    return profile_html
