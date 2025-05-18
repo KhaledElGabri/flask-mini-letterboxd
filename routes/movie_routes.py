@@ -7,7 +7,7 @@ from datetime import datetime
 movie_bp = Blueprint('movie', __name__, url_prefix='/movies')
 
 
-# get the current user from the session
+# get current user at session
 def get_current_user():
     users = load_users()
     username = session.get('username')
@@ -21,6 +21,7 @@ def get_current_user():
     session.clear()
     return None
 
+
 def status_of_user():
     user = get_current_user()
     if user is None:
@@ -28,18 +29,46 @@ def status_of_user():
         return login_html, 401
     return user
 
+
 def check_movie_by_id(movies, movie_id):
     for mov_id, movie in movies.items():
         if movie.get('movie_id') == movie_id or mov_id == movie_id:
             return movie
     return None
 
+
+# helper function to render the movie detail
+def render_movie_detail(movie, user, html):
+    movie_detail_html = get_html("movie_detail")
+    
+    replacements = {
+        '$$TITLE$$': movie['title'],
+        '$$POSTER_URL$$': movie['poster_url'],
+        '$$DIRECTOR$$': movie['director'],
+        '$$YEAR$$': str(movie['year']),
+        '$$RATING$$': str(movie['rating']) if movie['rating'] is not None else "N/A",
+        '$$DESCRIPTION$$': movie['description'],
+        '$$REVIEWS$$': html,
+    }
+
+    btn_text = "Mark as Watched"
+    if user and movie.get('movie_id', '') in user.movie_watched:
+        btn_text = "Watched"
+    replacements['$$MARK_AS_WATCHED$$'] = btn_text
+
+    for placeholder, val in replacements.items():
+        movie_detail_html = movie_detail_html.replace(placeholder, val)
+        
+    return movie_detail_html
+
+
 @movie_bp.route('/<movie_id>', methods=['GET', 'POST'])
 def movie_detail(movie_id):
     movies = load_movies()
-    users = load_users()
-    user = get_current_user()
+    users = load_users() 
+    user = get_current_user() # check the user
 
+    # check if the movie is there
     movie = check_movie_by_id(movies, movie_id)
     if not movie:
         not_found_html = get_html("not_found")
@@ -91,30 +120,11 @@ def movie_detail(movie_id):
         return redirect(url_for('movie.movie_detail', movie_id=movie_id))
 
     # render html
-    movie_detail_html = get_html("movie_detail")
     reviews_html = get_all_movie_reviews(movie, user)
-
-    replacements = {
-        '$$TITLE$$': movie['title'],
-        '$$POSTER_URL$$': movie['poster_url'],
-        '$$DIRECTOR$$': movie['director'],
-        '$$YEAR$$': str(movie['year']),
-        '$$RATING$$': str(movie['rating']) if movie['rating'] is not None else "N/A",
-        '$$DESCRIPTION$$': movie['description'],
-        '$$REVIEWS$$': reviews_html,
-    }
-
-    btn_text = "Mark as Watched"
-    if user and movie_id in user.movie_watched:
-        btn_text = "Watched"
-    replacements['$$MARK_AS_WATCHED$$'] = btn_text
-
-    for placeholder, val in replacements.items():
-        movie_detail_html = movie_detail_html.replace(placeholder, val)
-    return movie_detail_html
+    return render_movie_detail(movie, user, reviews_html)
 
 
-# search
+# search movies
 @movie_bp.route('/search')
 def search_movies():
     query = request.args.get('query', '').lower()
@@ -139,7 +149,9 @@ def search_movies():
         movie_items.append(item)
 
     index_html = get_html("index")
-    is_logged_in = 'username' in session
+    
+    user = get_current_user() # check the user
+    is_logged_in = user is not None
 
     # replace auth links based on login status
     if is_logged_in:
@@ -184,7 +196,7 @@ def add_review(movie_id, user, review_text):
     if 'reviews' not in movie:
         movie['reviews'] = {}
 
-    review_id = new_rev_id(movie) # generate unique review ID
+    review_id = new_rev_id(movie) # generate unique review id
 
     movie['reviews'][review_id] = {
         'review_id': review_id,
@@ -197,11 +209,12 @@ def add_review(movie_id, user, review_text):
     save_movies(movies)
     return True
 
+
+# helper method to generate a new id for review
 def new_rev_id(movie):
     max_id = 0
     if 'reviews' in movie:
-        for review_id, review in movie['reviews'].items():
-            # Check if the review_id is numeric
+        for review_id in movie['reviews'].keys():
             if review_id.isdigit():
                 review_id_int = int(review_id)
                 if review_id_int > max_id:
@@ -221,7 +234,7 @@ def get_all_movie_reviews(movie, current_user=None):
         edit_btn = ""
 
         if current_user is None:
-            current_user = get_current_user()
+            current_user = get_current_user() # check the user
 
         # check current user author of review
         owner_review = current_user and current_user.user_id == review['user_id']
@@ -258,28 +271,31 @@ def get_all_movie_reviews(movie, current_user=None):
         reviews_html += review_temp
     return reviews_html
 
-# delete a review if user is authorized
+# delete a review
 def delete_review(movie_id, review_id):
-    user = get_current_user()
+    user = get_current_user() # check the user
     if not user:
         return False
 
     movies = load_movies()
     movie = check_movie_by_id(movies, movie_id)
+    
 
-    if movie and 'reviews' in movie and review_id in movie['reviews']:
-        if movie['reviews'][review_id]['user_id'] == user.user_id:
-            del movie['reviews'][review_id]
-            save_movies(movies)
-            return True
-        else:
-            return False
-    else:
+    if not movie or 'reviews' not in movie or review_id not in movie['reviews']:
         return False
+        
+    # check current user author of review
+    if movie['reviews'][review_id]['user_id'] != user.user_id:
+        return False
+        
+    del movie['reviews'][review_id]
+    save_movies(movies)
+    return True
 
-#  show a form to edit a review
+
+# show form to edit a review
 def get_edit_review_form(movie_id, review_id):
-    user = get_current_user()
+    user = get_current_user() # check the user
     if not user:
         return status_of_user()
 
@@ -292,11 +308,10 @@ def get_edit_review_form(movie_id, review_id):
 
     review = movie['reviews'][review_id]
 
-    # if current user is author of the review
+    # check the author user of review
     if review['user_id'] != user.user_id:
         return redirect(url_for('movie.movie_detail', movie_id=movie_id))
 
-    movie_detail_html = get_html("movie_detail")
     edit_form = f"""
     <div class="review-section">
         <div class="reviews-header">
@@ -312,26 +327,10 @@ def get_edit_review_form(movie_id, review_id):
     </div>
     """
 
-    replacements = {
-        '$$TITLE$$': movie['title'],
-        '$$POSTER_URL$$': movie['poster_url'],
-        '$$DIRECTOR$$': movie['director'],
-        '$$YEAR$$': str(movie['year']),
-        '$$RATING$$': str(movie['rating']) if movie['rating'] is not None else "N/A",
-        '$$DESCRIPTION$$': movie['description'],
-        '$$REVIEWS$$': edit_form,
-    }
+    return render_movie_detail(movie, user, edit_form)
 
-    btn_text = "Mark as Watched"
-    if user and movie_id in user.movie_watched:
-        btn_text = "Watched"
-    replacements['$$MARK_AS_WATCHED$$'] = btn_text
 
-    for placeholder, val in replacements.items():
-        movie_detail_html = movie_detail_html.replace(placeholder, val)
-
-    return movie_detail_html
-
+# update a review
 def update_review(movie_id, review_id, updated_text):
     user = get_current_user()
     if not user:
