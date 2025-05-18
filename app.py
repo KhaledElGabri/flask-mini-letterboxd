@@ -1,8 +1,9 @@
-from flask import Flask, session
+from flask import Flask
 from routes.movie_routes import movie_bp
 from routes.user_routes import user_bp
 from utils import get_html
 from data_service import load_movies
+from routes.movie_routes import get_current_user
 
 app = Flask(__name__, static_folder='static')
 
@@ -25,12 +26,13 @@ def home():
                     <img src="{movie['poster_url']}" class="movie-poster">
                 </a>
             </div>'''
-        # print(movie) # debugging
         movie_items.append(item)
 
     movies_grid = "".join(movie_items)
 
-    is_logged_in = 'username' in session
+    user = get_current_user()
+    is_logged_in = user is not None
+    
     index_html = get_html("index")
     if is_logged_in:
         user_auth_links = f'''

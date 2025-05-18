@@ -1,10 +1,6 @@
 import datetime
 
 class User:
-    """
-    User Details
-    """
-
     def __init__(self, username, password, profile_picture_url, user_id=None, joined_on=None, movie_watched=None):
         self.user_id = user_id
         self.username = username
