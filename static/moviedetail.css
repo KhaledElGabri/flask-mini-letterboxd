@@ -128,7 +128,7 @@ textarea{resize: none;}
 }
 .cancel-btn:hover {background-color: #888;}
 
-/* no reviews style */
+/* no reviews */
 .no-reviews {
   color: #B8C4D2;
   font-style: italic;
@@ -136,4 +136,20 @@ textarea{resize: none;}
   padding: 20px;
   background-color: #3A4450;
   border-radius: 5px;
+}
+
+/* media query for responsive design */
+@media screen and (max-width: 700px) {
+  .container { width: 100%; max-width: 95%;}
+
+  .movie-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .movie-poster-detail {max-width: 250px; width: 90%; }
+  .watched-button {margin-top: 15px;}
+  .review-area {width: 85%;}
 }
