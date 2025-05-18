@@ -5,9 +5,7 @@ body {
     color: #e2e2e2;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #999;
+.main-container {margin: 20px auto; padding: 0 111px;
 }
 
 /* Nav */
@@ -26,6 +24,29 @@ h1, h2 {
 
 .nav h1 a { color: #e2e2e2; text-decoration: none;
 }
+
+a.log-in, a.sign-up, a.log-out {
+    background-color: #00AC1C;
+    color: white;
+    font-size: 12px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.log-in:hover,a.sign-up:hover{
+    background-color: #008C16;
+}
+
+a.log-out { background-color: #E53935; color: white;
+}
+
+a.log-out:hover {
+    background-color: #C62828;
+}
+
 
 .main-container {
     margin: 20px auto;
@@ -60,6 +81,10 @@ form div { margin: 3px 0 19px 0;}
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.auth-form button[type="submit"]:hover{
+    background-color: #008C16;
 }
 
 .auth-form input[type="text"], input[type="password"] {
@@ -102,8 +127,8 @@ form div { margin: 3px 0 19px 0;}
 }
 
 .search-form button[type="submit"] {
-    background-color: #00aff2;
-    color: white;
+    background-color: #0082b4;
+    color: black;
     font-size: 12px;
     padding: 10px 15px;
     border: none;
@@ -111,19 +136,17 @@ form div { margin: 3px 0 19px 0;}
     cursor: pointer;
     text-decoration: none;
     margin-top: 0;
-    /*display: inline-block;*/
 }
 
 .search-form button[type="submit"]:hover {
-    background-color: #0087c0;
+    background-color: #00a8ed;
     cursor: pointer;
 }
 
-
-/* movies-posters */
+/* Home Movie Grid */
 #movie-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
     gap: 12px;
 }
 
@@ -147,6 +170,20 @@ form div { margin: 3px 0 19px 0;}
     object-fit: cover;
 }
 
+/* Back to home btn */
+.back-to-home {
+    background-color: #445566;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 0;
+}
+
+.back-to-home:hover {
+    background-color: #2C353F;
+}
 
 
 /* not found */
