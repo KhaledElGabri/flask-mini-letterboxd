@@ -4,7 +4,7 @@ from utils import get_html
 from datetime import datetime
 
 
-movie_bp = Blueprint('movie_routes', __name__, url_prefix='/movies')
+movie_bp = Blueprint('movie', __name__, url_prefix='/movies')
 
 
 # get the current user from the session
@@ -71,6 +71,7 @@ def movie_detail(movie_id):
                 update_review(movie_id, review_id, updated_text)
             return redirect(url_for('movie.movie_detail', movie_id=movie_id))
 
+        # watched request
         elif 'review_text' not in request.form:
             for usr in users:
                 if usr.username == user.username:
@@ -113,14 +114,7 @@ def movie_detail(movie_id):
     return movie_detail_html
 
 
-def mark_as_watched(movie_id, user, movie_title):
-    user.marked_movies(movie_id, movie_title)
-
-def unmark_as_watched(movie_id, user):
-    user.unmarked_movies(movie_id)
-
-
-# search movies feature
+# search
 @movie_bp.route('/search')
 def search_movies():
     query = request.args.get('query', '').lower()
@@ -144,7 +138,6 @@ def search_movies():
             </div>'''
         movie_items.append(item)
 
-
     index_html = get_html("index")
     is_logged_in = 'username' in session
 
@@ -162,14 +155,24 @@ def search_movies():
             <a href="/user/signup" class="sign-up">Sign Up</a>
         </nav>
         '''
-    index_html = index_html.replace("$$AUTH_LINKS$$", auth_links)
 
+    index_html = index_html.replace("$$AUTH_LINKS$$", auth_links)
     if not movie_items:
         no_results = '<div>No movies found matching your search.</div>'
         return index_html.replace("$$MOVIES$$", no_results)
 
     movies_grid = "".join(movie_items)
     return index_html.replace("$$MOVIES$$", f'<div id="movie-list">{movies_grid}</div>')
+
+
+# marked as watched
+def mark_as_watched(movie_id, user, movie_title):
+    user.marked_movies(movie_id, movie_title)
+
+# marked as watched
+def unmark_as_watched(movie_id, user):
+    user.unmarked_movies(movie_id)
+
 
 # add review feature
 def add_review(movie_id, user, review_text):
@@ -181,11 +184,11 @@ def add_review(movie_id, user, review_text):
     if 'reviews' not in movie:
         movie['reviews'] = {}
 
-    review_id = new_rev_id(movie)
+    review_id = new_rev_id(movie) # generate unique review ID
 
     movie['reviews'][review_id] = {
         'review_id': review_id,
-        'user_id': user.user_id,  # Use the actual user_id instead of username
+        'user_id': user.user_id,  # use actual user id instead of username
         'username': user.username,
         'review_text': review_text,
         'date': datetime.now().strftime("%Y-%m-%d")
@@ -206,7 +209,8 @@ def new_rev_id(movie):
 
     return str(max_id + 1)
 
-# get all reviews with delete, edit btn
+
+# get all reviews with delete and edit btns
 def get_all_movie_reviews(movie, current_user=None):
     if not movie or 'reviews' not in movie or not movie['reviews']:
         return "<p class='no-reviews'>No reviews yet. Be the first to share your thoughts!</p>"
@@ -219,8 +223,8 @@ def get_all_movie_reviews(movie, current_user=None):
         if current_user is None:
             current_user = get_current_user()
 
+        # check current user author of review
         owner_review = current_user and current_user.user_id == review['user_id']
-
         if owner_review:
             edit_btn = f"""
             <form method="POST" class="edit-review-form">
@@ -254,7 +258,6 @@ def get_all_movie_reviews(movie, current_user=None):
         reviews_html += review_temp
     return reviews_html
 
-
 # delete a review if user is authorized
 def delete_review(movie_id, review_id):
     user = get_current_user()
@@ -274,7 +277,7 @@ def delete_review(movie_id, review_id):
     else:
         return False
 
-#  Show a form to edit a review
+#  show a form to edit a review
 def get_edit_review_form(movie_id, review_id):
     user = get_current_user()
     if not user:
@@ -329,9 +332,7 @@ def get_edit_review_form(movie_id, review_id):
 
     return movie_detail_html
 
-#  update review if current user is authorized
 def update_review(movie_id, review_id, updated_text):
-
     user = get_current_user()
     if not user:
         return False
@@ -340,10 +341,8 @@ def update_review(movie_id, review_id, updated_text):
     movie = check_movie_by_id(movies, movie_id)
 
     if movie and 'reviews' in movie and review_id in movie['reviews']:
-        # Check if the current user is the author of the review
         if movie['reviews'][review_id]['user_id'] == user.user_id:
             movie['reviews'][review_id]['review_text'] = updated_text
-            # Update the date to show when it was edited
             movie['reviews'][review_id]['date'] = datetime.now().strftime("%Y-%m-%d") + " (edited)"
             save_movies(movies)
             return True

@@ -3,9 +3,7 @@ from data_service import load_users, save_users, user_logs
 from user import User
 from utils import get_html
 
-
 user_bp = Blueprint('user', __name__, url_prefix='/user')
-
 
 
 # validate the password
@@ -26,6 +24,7 @@ def validate_pass(password):
 # register new user
 @user_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
+    print("Username fail to sign up")
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -48,6 +47,7 @@ def signup():
             print(f"Username '{username}' already exists")
             return get_html("signup")
         else:
+            print(f"Username '{username}' fail to sign up")
             new_user_id = User.generate_new_id(users)
             new_user = User(
                 user_id=new_user_id,
@@ -56,14 +56,15 @@ def signup():
                 profile_picture_url='/static/img/default_profile.png'
             )
             users.append(new_user)
-
             save_users(users)
             user_logs(username, "created account")
+
             session['username'] = username
             session.permanent = True
             return redirect(url_for('user.profile'))
     else:
-        return get_html("signup")
+        print("Username fail to sign up")
+    return get_html("signup")
 
 
 # login user

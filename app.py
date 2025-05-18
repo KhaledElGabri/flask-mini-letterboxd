@@ -58,4 +58,4 @@ def page_not_found(e):
     return get_html("not_found"), 404
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

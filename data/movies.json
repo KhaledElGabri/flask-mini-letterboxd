@@ -1,402 +1,402 @@
 {
-  "1": {
-    "movie_id": "1",
-    "title": "Heat",
-    "director": "Michael Mann",
-    "year": 1995,
-    "rating": null,
-    "description": "A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist.",
-    "poster_url": "https://image.tmdb.org/t/p/original/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
-    "reviews": {}
-  },
-  "2": {
-    "movie_id": "2",
-    "title": "Nightcrawler",
-    "director": "Dan Gilroy",
-    "year": 2014,
-    "rating": null,
-    "description": "When Louis Bloom, a con man desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story.",
-    "poster_url": "https://image.tmdb.org/t/p/original/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
-    "reviews": {}
-  },
-  "3": {
-    "movie_id": "3",
-    "title": "Attack on Titan: The Final Season - The Last Attack",
-    "director": "Yuichiro Hayashi",
-    "year": 2023,
-    "rating": null,
-    "description": "The final battle for humanity's survival against the Titans reaches its climax.",
-    "poster_url": "https://image.tmdb.org/t/p/w1280/wgwldDDlTDDMrluOMkpSA8lyKjv.jpg",
-    "reviews": {}
-  },
-  "4": {
-    "movie_id": "4",
-    "title": "Goodfellas",
-    "director": "Martin Scorsese",
-    "year": 1990,
-    "rating": null,
-    "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
-    "poster_url": "https://image.tmdb.org/t/p/original/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
-    "reviews": {}
-  },
-  "5": {
-    "movie_id": "5",
-    "title": "Prisoners",
-    "director": "Denis Villeneuve",
-    "year": 2013,
-    "rating": null,
-    "description": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.",
-    "poster_url": "https://image.tmdb.org/t/p/original/tuZhZ6biFMr5n9YSVuHOJnNL1uU.jpg",
-    "reviews": {}
-  },
-  "6": {
-    "movie_id": "6",
-    "title": "Drive",
-    "director": "Nicolas Winding Refn",
-    "year": 2011,
-    "rating": null,
-    "description": "A mysterious Hollywood stuntman and mechanic moonlights as a getaway driver and finds himself in trouble when he helps out his neighbor.",
-    "poster_url": "https://image.tmdb.org/t/p/original/602vevIURmpDfzbnv5Ubi6wIkQm.jpg",
-    "reviews": {}
-  },
-  "7": {
-    "movie_id": "7",
-    "title": "Manchester by the Sea",
-    "director": "Kenneth Lonergan",
-    "year": 2016,
-    "rating": null,
-    "description": "A depressed uncle is asked to take care of his teenage nephew after the boy's father dies.",
-    "poster_url": "https://image.tmdb.org/t/p/original/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg",
-    "reviews": {}
-  },
-  "8": {
-    "movie_id": "8",
-    "title": "Wall-E",
-    "director": "Andrew Stanton",
-    "year": 2008,
-    "rating": null,
-    "description": "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
-    "poster_url": "https://image.tmdb.org/t/p/original/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
-    "reviews": {}
-  },
-  "9": {
-    "movie_id": "9",
-    "title": "Before Sunrise",
-    "director": "Richard Linklater",
-    "year": 1995,
-    "rating": null,
-    "description": "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
-    "poster_url": "https://image.tmdb.org/t/p/original/aZ2Vkrc4RqIjewYbmfy74oDgZfX.jpg",
-    "reviews": {}
-  },
-  "10": {
-    "movie_id": "10",
-    "title": "Fight Club",
-    "director": "David Fincher",
-    "year": 1999,
-    "rating": null,
-    "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
-    "poster_url": "https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-    "reviews": {}
-  },
-  "11": {
-    "movie_id": "11",
-    "title": "Pulp Fiction",
-    "director": "Quentin Tarantino",
-    "year": 1994,
-    "rating": null,
-    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-    "poster_url": "https://image.tmdb.org/t/p/original/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-    "reviews": {}
-  },
-  "12": {
-    "movie_id": "12",
-    "title": "Snatch",
-    "director": "Guy Ritchie",
-    "year": 2000,
-    "rating": null,
-    "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
-    "poster_url": "https://image.tmdb.org/t/p/original/8KSDI7ijEv7QVZdIyrLw5Gnhhr8.jpg",
-    "reviews": {}
-  },
-  "13": {
-    "movie_id": "13",
-    "title": "Inception",
-    "director": "Christopher Nolan",
-    "year": 2010,
-    "rating": null,
-    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-    "poster_url": "https://image.tmdb.org/t/p/original/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
-    "reviews": {}
-  },
-  "14": {
-    "movie_id": "14",
-    "title": "Ratatouille",
-    "director": "Brad Bird",
-    "year": 2007,
-    "rating": null,
-    "description": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
-    "poster_url": "https://image.tmdb.org/t/p/original/gJtaT7mZl76Hd8KIGijDyalqom9.jpg",
-    "reviews": {}
-  },
-  "15": {
-    "movie_id": "15",
-    "title": "Spirited Away",
-    "director": "Hayao Miyazaki",
-    "year": 2001,
-    "rating": null,
-    "description": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
-    "poster_url": "https://image.tmdb.org/t/p/original/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
-    "reviews": {}
-  },
-  "16": {
-    "movie_id": "16",
-    "title": "Training Day",
-    "director": "Antoine Fuqua",
-    "year": 2001,
-    "rating": null,
-    "description": "On his first day on the job as a Los Angeles narcotics officer, a rookie cop goes beyond a full work day in training within the narcotics division of the LAPD with a rogue detective who isn't what he appears to be.",
-    "poster_url": "https://image.tmdb.org/t/p/original/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
-    "reviews": {}
-  },
-  "17": {
-    "movie_id": "17",
-    "title": "A Silent Voice",
-    "director": "Naoko Yamada",
-    "year": 2016,
-    "rating": null,
-    "description": "A young man is ostracized by his classmates after he bullies a deaf girl to the point where she moves away. Years later, he sets off on a path for redemption.",
-    "poster_url": "https://image.tmdb.org/t/p/original/drlyoSKDOPnxzJFrRWGqzDsyJvR.jpg",
-    "reviews": {}
-  },
-  "18": {
-    "movie_id": "18",
-    "title": "Inglourious Basterds",
-    "director": "Quentin Tarantino",
-    "year": 2009,
-    "rating": null,
-    "description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
-    "poster_url": "https://image.tmdb.org/t/p/original/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg",
-    "reviews": {}
-  },
-  "19": {
-    "movie_id": "19",
-    "title": "Se7en",
-    "director": "David Fincher",
-    "year": 1995,
-    "rating": null,
-    "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
-    "poster_url": "https://image.tmdb.org/t/p/original/6yoghtyTpznpBik8EngEmJskVUO.jpg",
-    "reviews": {}
-  },
-  "20": {
-    "movie_id": "20",
-    "title": "The Social Network",
-    "director": "David Fincher",
-    "year": 2010,
-    "rating": null,
-    "description": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business.",
-    "poster_url": "https://image.tmdb.org/t/p/original/jXbqfVHmvCikyTw2Lf5OhKyt9Ym.jpg",
-    "reviews": {}
-  },
-  "21": {
-    "movie_id": "21",
-    "title": "The Godfather Part II",
-    "director": "Francis Ford Coppola",
-    "year": 1974,
-    "rating": null,
-    "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
-    "poster_url": "https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
-    "reviews": {}
-  },
-  "22": {
-    "movie_id": "22",
-    "title": "Gone Girl",
-    "director": "David Fincher",
-    "year": 2014,
-    "rating": null,
-    "description": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
-    "poster_url": "https://image.tmdb.org/t/p/original/lv5xShBIDPe7m4ufdlV0IAc7Avk.jpg",
-    "reviews": {}
-  },
-  "23": {
-    "movie_id": "23",
-    "title": "American History X",
-    "director": "Tony Kaye",
-    "year": 1998,
-    "rating": null,
-    "description": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
-    "poster_url": "https://image.tmdb.org/t/p/original/7QZb4q8GpCgfnubOk29WGzk8XDE.jpg",
-    "reviews": {}
-  },
-  "24": {
-    "movie_id": "24",
-    "title": "Howl's Moving Castle",
-    "director": "Hayao Miyazaki",
-    "year": 2004,
-    "rating": null,
-    "description": "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
-    "poster_url": "https://image.tmdb.org/t/p/original/TkTPELv4kC3u1lkloush8skOjE.jpg",
-    "reviews": {}
-  },
-  "25": {
-    "movie_id": "25",
-    "title": "Eternal Sunshine of the Spotless Mind",
-    "director": "Michel Gondry",
-    "year": 2004,
-    "rating": null,
-    "description": "A couple undergoes a procedure to erase each other from their memories when their relationship turns sour, but it is only through the process of loss that they discover what they had to begin with.",
-    "poster_url": "https://image.tmdb.org/t/p/original/5fIsE0ja6PseoN2ffx71BaV4VJo.jpg",
-    "reviews": {}
-  },
-  "26": {
-    "movie_id": "26",
-    "title": "Crazy, Stupid, Love.",
-    "director": "Glenn Ficarra, John Requa",
-    "year": 2011,
-    "rating": null,
-    "description": "A middle-aged husband's life changes dramatically when his wife asks him for a divorce. He seeks to rediscover his manhood with the help of a newfound friend, Jacob, learning to pick up girls at bars.",
-    "poster_url": "https://image.tmdb.org/t/p/original/p4RafgAPk558muOjnBMHhMArjS2.jpg",
-    "reviews": {}
-  },
-  "27": {
-    "movie_id": "27",
-    "title": "Blade Runner 2049",
-    "director": "Denis Villeneuve",
-    "year": 2017,
-    "rating": null,
-    "description": "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.",
-    "poster_url": "https://image.tmdb.org/t/p/original/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
-    "reviews": {}
-  },
-  "28": {
-    "movie_id": "28",
-    "title": "Taxi Driver",
-    "director": "Martin Scorsese",
-    "year": 1976,
-    "rating": null,
-    "description": "A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action.",
-    "poster_url": "https://image.tmdb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
-    "reviews": {}
-  },
-  "29": {
-    "movie_id": "29",
-    "title": "The Irishman",
-    "director": "Martin Scorsese",
-    "year": 2019,
-    "rating": null,
-    "description": "Hitman Frank Sheeran looks back at the secrets he kept as a loyal member of the Bufalino crime family in this acclaimed film from Martin Scorsese.",
-    "poster_url": "https://image.tmdb.org/t/p/original/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg",
-    "reviews": {}
-  },
-  "30": {
-    "movie_id": "30",
-    "title": "Interstellar",
-    "director": "Christopher Nolan",
-    "year": 2014,
-    "rating": null,
-    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-    "poster_url": "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-    "reviews": {}
-  },
-  "31": {
-    "movie_id": "31",
-    "title": "The Wolf of Wall Street",
-    "director": "Martin Scorsese",
-    "year": 2013,
-    "rating": null,
-    "description": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
-    "poster_url": "https://image.tmdb.org/t/p/original/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg",
-    "reviews": {}
-  },
-  "32": {
-    "movie_id": "32",
-    "title": "The Dark Knight",
-    "director": "Christopher Nolan",
-    "year": 2008,
-    "rating": null,
-    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-    "poster_url": "https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-    "reviews": {}
-  },
-  "33": {
-    "movie_id": "33",
-    "title": "Her",
-    "director": "Spike Jonze",
-    "year": 2013,
-    "rating": null,
-    "description": "A lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
-    "poster_url": "https://image.tmdb.org/t/p/original/yk4J4aewWYNiBhD49WD7UaBBn37.jpg",
-    "reviews": {}
-  },
-  "34": {
-    "movie_id": "34",
-    "title": "My Cousin Vinny",
-    "director": "Jonathan Lynn",
-    "year": 1992,
-    "rating": null,
-    "description": "Two New Yorkers accused of murder in rural Alabama while on their way back to college call in the help of one of their cousins, a loudmouth lawyer with no trial experience.",
-    "poster_url": "https://image.tmdb.org/t/p/original/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
-    "reviews": {}
-  },
-  "35": {
-    "movie_id": "35",
-    "title": "Joker",
-    "director": "Todd Phillips",
-    "year": 2019,
-    "rating": null,
-    "description": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
-    "poster_url": "https://image.tmdb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-    "reviews": {}
-  },
-  "36": {
-    "movie_id": "36",
-    "title": "Once Upon a Time... in Hollywood",
-    "director": "Quentin Tarantino",
-    "year": 2019,
-    "rating": null,
-    "description": "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",
-    "poster_url": "https://image.tmdb.org/t/p/original/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
-    "reviews": {}
-  },
-  "37": {
-    "movie_id": "37",
-    "title": "The Departed",
-    "director": "Martin Scorsese",
-    "year": 2006,
-    "rating": null,
-    "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
-    "poster_url": "https://image.tmdb.org/t/p/original/iSwbYqqezu6J6XjUA3pseEbcoGG.jpg",
-    "reviews": {}
-  },
-  "38": {
-    "movie_id": "38",
-    "title": "Casino",
-    "director": "Martin Scorsese",
-    "year": 1995,
-    "rating": null,
-    "description": "A tale of greed, deception, money, power, and murder occur between two best friends: a mafia enforcer and a casino executive, compete against each other over a gambling empire, and over a fast living and fast loving socialite.",
-    "poster_url": "https://image.tmdb.org/t/p/original/gziIkUSnYuj9ChCi8qOu2ZunpSC.jpg",
-    "reviews": {}
-  },
-  "39": {
-    "movie_id": "39",
-    "title": "Dog Day Afternoon",
-    "director": "Sidney Lumet",
-    "year": 1975,
-    "rating": null,
-    "description": "A man robs a bank to pay for his lover's operation, which turns into a hostage situation and a media circus.",
-    "poster_url": "https://image.tmdb.org/t/p/original/cS5aXrb6TreoGEQhiQePntUK5Gk.jpg",
-    "reviews": {}
-  },
-  "40": {
-    "movie_id": "40",
-    "title": "Your Name",
-    "director": "Makoto Shinkai",
-    "year": 2016,
-    "rating": null,
-    "description": "Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?",
-    "poster_url": "https://image.tmdb.org/t/p/original/q719jXXEzOoYaps6babgKnONONX.jpg",
-    "reviews": {}
-  }
+    "1": {
+        "movie_id": "1",
+        "title": "Heat",
+        "director": "Michael Mann",
+        "year": 1995,
+        "rating": null,
+        "description": "A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist.",
+        "poster_url": "https://image.tmdb.org/t/p/original/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
+        "reviews": {}
+    },
+    "2": {
+        "movie_id": "2",
+        "title": "Nightcrawler",
+        "director": "Dan Gilroy",
+        "year": 2014,
+        "rating": null,
+        "description": "When Louis Bloom, a con man desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story.",
+        "poster_url": "https://image.tmdb.org/t/p/original/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
+        "reviews": {}
+    },
+    "3": {
+        "movie_id": "3",
+        "title": "Attack on Titan: The Final Season - The Last Attack",
+        "director": "Yuichiro Hayashi",
+        "year": 2023,
+        "rating": null,
+        "description": "The final battle for humanity's survival against the Titans reaches its climax.",
+        "poster_url": "https://image.tmdb.org/t/p/w1280/wgwldDDlTDDMrluOMkpSA8lyKjv.jpg",
+        "reviews": {}
+    },
+    "4": {
+        "movie_id": "4",
+        "title": "Goodfellas",
+        "director": "Martin Scorsese",
+        "year": 1990,
+        "rating": null,
+        "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+        "poster_url": "https://image.tmdb.org/t/p/original/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+        "reviews": {}
+    },
+    "5": {
+        "movie_id": "5",
+        "title": "Prisoners",
+        "director": "Denis Villeneuve",
+        "year": 2013,
+        "rating": null,
+        "description": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.",
+        "poster_url": "https://image.tmdb.org/t/p/original/tuZhZ6biFMr5n9YSVuHOJnNL1uU.jpg",
+        "reviews": {}
+    },
+    "6": {
+        "movie_id": "6",
+        "title": "Drive",
+        "director": "Nicolas Winding Refn",
+        "year": 2011,
+        "rating": null,
+        "description": "A mysterious Hollywood stuntman and mechanic moonlights as a getaway driver and finds himself in trouble when he helps out his neighbor.",
+        "poster_url": "https://image.tmdb.org/t/p/original/602vevIURmpDfzbnv5Ubi6wIkQm.jpg",
+        "reviews": {}
+    },
+    "7": {
+        "movie_id": "7",
+        "title": "Manchester by the Sea",
+        "director": "Kenneth Lonergan",
+        "year": 2016,
+        "rating": null,
+        "description": "A depressed uncle is asked to take care of his teenage nephew after the boy's father dies.",
+        "poster_url": "https://image.tmdb.org/t/p/original/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg",
+        "reviews": {}
+    },
+    "8": {
+        "movie_id": "8",
+        "title": "Wall-E",
+        "director": "Andrew Stanton",
+        "year": 2008,
+        "rating": null,
+        "description": "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
+        "poster_url": "https://image.tmdb.org/t/p/original/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+        "reviews": {}
+    },
+    "9": {
+        "movie_id": "9",
+        "title": "Before Sunrise",
+        "director": "Richard Linklater",
+        "year": 1995,
+        "rating": null,
+        "description": "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
+        "poster_url": "https://image.tmdb.org/t/p/original/aZ2Vkrc4RqIjewYbmfy74oDgZfX.jpg",
+        "reviews": {}
+    },
+    "10": {
+        "movie_id": "10",
+        "title": "Fight Club",
+        "director": "David Fincher",
+        "year": 1999,
+        "rating": null,
+        "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+        "poster_url": "https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+        "reviews": {}
+    },
+    "11": {
+        "movie_id": "11",
+        "title": "Pulp Fiction",
+        "director": "Quentin Tarantino",
+        "year": 1994,
+        "rating": null,
+        "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        "poster_url": "https://image.tmdb.org/t/p/original/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+        "reviews": {}
+    },
+    "12": {
+        "movie_id": "12",
+        "title": "Snatch",
+        "director": "Guy Ritchie",
+        "year": 2000,
+        "rating": null,
+        "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+        "poster_url": "https://image.tmdb.org/t/p/original/8KSDI7ijEv7QVZdIyrLw5Gnhhr8.jpg",
+        "reviews": {}
+    },
+    "13": {
+        "movie_id": "13",
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": null,
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "poster_url": "https://image.tmdb.org/t/p/original/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        "reviews": {}
+    },
+    "14": {
+        "movie_id": "14",
+        "title": "Ratatouille",
+        "director": "Brad Bird",
+        "year": 2007,
+        "rating": null,
+        "description": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
+        "poster_url": "https://image.tmdb.org/t/p/original/gJtaT7mZl76Hd8KIGijDyalqom9.jpg",
+        "reviews": {}
+    },
+    "15": {
+        "movie_id": "15",
+        "title": "Spirited Away",
+        "director": "Hayao Miyazaki",
+        "year": 2001,
+        "rating": null,
+        "description": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+        "poster_url": "https://image.tmdb.org/t/p/original/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+        "reviews": {}
+    },
+    "16": {
+        "movie_id": "16",
+        "title": "Training Day",
+        "director": "Antoine Fuqua",
+        "year": 2001,
+        "rating": null,
+        "description": "On his first day on the job as a Los Angeles narcotics officer, a rookie cop goes beyond a full work day in training within the narcotics division of the LAPD with a rogue detective who isn't what he appears to be.",
+        "poster_url": "https://image.tmdb.org/t/p/original/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
+        "reviews": {}
+    },
+    "17": {
+        "movie_id": "17",
+        "title": "A Silent Voice",
+        "director": "Naoko Yamada",
+        "year": 2016,
+        "rating": null,
+        "description": "A young man is ostracized by his classmates after he bullies a deaf girl to the point where she moves away. Years later, he sets off on a path for redemption.",
+        "poster_url": "https://image.tmdb.org/t/p/original/drlyoSKDOPnxzJFrRWGqzDsyJvR.jpg",
+        "reviews": {}
+    },
+    "18": {
+        "movie_id": "18",
+        "title": "Inglourious Basterds",
+        "director": "Quentin Tarantino",
+        "year": 2009,
+        "rating": null,
+        "description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+        "poster_url": "https://image.tmdb.org/t/p/original/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg",
+        "reviews": {}
+    },
+    "19": {
+        "movie_id": "19",
+        "title": "Se7en",
+        "director": "David Fincher",
+        "year": 1995,
+        "rating": null,
+        "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+        "poster_url": "https://image.tmdb.org/t/p/original/6yoghtyTpznpBik8EngEmJskVUO.jpg",
+        "reviews": {}
+    },
+    "20": {
+        "movie_id": "20",
+        "title": "The Social Network",
+        "director": "David Fincher",
+        "year": 2010,
+        "rating": null,
+        "description": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business.",
+        "poster_url": "https://image.tmdb.org/t/p/original/jXbqfVHmvCikyTw2Lf5OhKyt9Ym.jpg",
+        "reviews": {}
+    },
+    "21": {
+        "movie_id": "21",
+        "title": "The Godfather Part II",
+        "director": "Francis Ford Coppola",
+        "year": 1974,
+        "rating": null,
+        "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+        "poster_url": "https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+        "reviews": {}
+    },
+    "22": {
+        "movie_id": "22",
+        "title": "Gone Girl",
+        "director": "David Fincher",
+        "year": 2014,
+        "rating": null,
+        "description": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+        "poster_url": "https://image.tmdb.org/t/p/original/lv5xShBIDPe7m4ufdlV0IAc7Avk.jpg",
+        "reviews": {}
+    },
+    "23": {
+        "movie_id": "23",
+        "title": "American History X",
+        "director": "Tony Kaye",
+        "year": 1998,
+        "rating": null,
+        "description": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
+        "poster_url": "https://image.tmdb.org/t/p/original/7QZb4q8GpCgfnubOk29WGzk8XDE.jpg",
+        "reviews": {}
+    },
+    "24": {
+        "movie_id": "24",
+        "title": "Howl's Moving Castle",
+        "director": "Hayao Miyazaki",
+        "year": 2004,
+        "rating": null,
+        "description": "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
+        "poster_url": "https://image.tmdb.org/t/p/original/TkTPELv4kC3u1lkloush8skOjE.jpg",
+        "reviews": {}
+    },
+    "25": {
+        "movie_id": "25",
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "director": "Michel Gondry",
+        "year": 2004,
+        "rating": null,
+        "description": "A couple undergoes a procedure to erase each other from their memories when their relationship turns sour, but it is only through the process of loss that they discover what they had to begin with.",
+        "poster_url": "https://image.tmdb.org/t/p/original/5fIsE0ja6PseoN2ffx71BaV4VJo.jpg",
+        "reviews": {}
+    },
+    "26": {
+        "movie_id": "26",
+        "title": "Crazy, Stupid, Love.",
+        "director": "Glenn Ficarra, John Requa",
+        "year": 2011,
+        "rating": null,
+        "description": "A middle-aged husband's life changes dramatically when his wife asks him for a divorce. He seeks to rediscover his manhood with the help of a newfound friend, Jacob, learning to pick up girls at bars.",
+        "poster_url": "https://image.tmdb.org/t/p/original/p4RafgAPk558muOjnBMHhMArjS2.jpg",
+        "reviews": {}
+    },
+    "27": {
+        "movie_id": "27",
+        "title": "Blade Runner 2049",
+        "director": "Denis Villeneuve",
+        "year": 2017,
+        "rating": null,
+        "description": "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.",
+        "poster_url": "https://image.tmdb.org/t/p/original/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+        "reviews": {}
+    },
+    "28": {
+        "movie_id": "28",
+        "title": "Taxi Driver",
+        "director": "Martin Scorsese",
+        "year": 1976,
+        "rating": null,
+        "description": "A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action.",
+        "poster_url": "https://image.tmdb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+        "reviews": {}
+    },
+    "29": {
+        "movie_id": "29",
+        "title": "The Irishman",
+        "director": "Martin Scorsese",
+        "year": 2019,
+        "rating": null,
+        "description": "Hitman Frank Sheeran looks back at the secrets he kept as a loyal member of the Bufalino crime family in this acclaimed film from Martin Scorsese.",
+        "poster_url": "https://image.tmdb.org/t/p/original/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg",
+        "reviews": {}
+    },
+    "30": {
+        "movie_id": "30",
+        "title": "Interstellar",
+        "director": "Christopher Nolan",
+        "year": 2014,
+        "rating": null,
+        "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "poster_url": "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+        "reviews": {}
+    },
+    "31": {
+        "movie_id": "31",
+        "title": "The Wolf of Wall Street",
+        "director": "Martin Scorsese",
+        "year": 2013,
+        "rating": null,
+        "description": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+        "poster_url": "https://image.tmdb.org/t/p/original/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg",
+        "reviews": {}
+    },
+    "32": {
+        "movie_id": "32",
+        "title": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "year": 2008,
+        "rating": null,
+        "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "poster_url": "https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+        "reviews": {}
+    },
+    "33": {
+        "movie_id": "33",
+        "title": "Her",
+        "director": "Spike Jonze",
+        "year": 2013,
+        "rating": null,
+        "description": "A lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+        "poster_url": "https://image.tmdb.org/t/p/original/yk4J4aewWYNiBhD49WD7UaBBn37.jpg",
+        "reviews": {}
+    },
+    "34": {
+        "movie_id": "34",
+        "title": "My Cousin Vinny",
+        "director": "Jonathan Lynn",
+        "year": 1992,
+        "rating": null,
+        "description": "Two New Yorkers accused of murder in rural Alabama while on their way back to college call in the help of one of their cousins, a loudmouth lawyer with no trial experience.",
+        "poster_url": "https://image.tmdb.org/t/p/original/iwSURa8nS2ujwrU3s1lfxxX7voH.jpg",
+        "reviews": {}
+    },
+    "35": {
+        "movie_id": "35",
+        "title": "Joker",
+        "director": "Todd Phillips",
+        "year": 2019,
+        "rating": null,
+        "description": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+        "poster_url": "https://image.tmdb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+        "reviews": {}
+    },
+    "36": {
+        "movie_id": "36",
+        "title": "Once Upon a Time... in Hollywood",
+        "director": "Quentin Tarantino",
+        "year": 2019,
+        "rating": null,
+        "description": "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+        "poster_url": "https://image.tmdb.org/t/p/original/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+        "reviews": {}
+    },
+    "37": {
+        "movie_id": "37",
+        "title": "The Departed",
+        "director": "Martin Scorsese",
+        "year": 2006,
+        "rating": null,
+        "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+        "poster_url": "https://image.tmdb.org/t/p/original/iSwbYqqezu6J6XjUA3pseEbcoGG.jpg",
+        "reviews": {}
+    },
+    "38": {
+        "movie_id": "38",
+        "title": "Casino",
+        "director": "Martin Scorsese",
+        "year": 1995,
+        "rating": null,
+        "description": "A tale of greed, deception, money, power, and murder occur between two best friends: a mafia enforcer and a casino executive, compete against each other over a gambling empire, and over a fast living and fast loving socialite.",
+        "poster_url": "https://image.tmdb.org/t/p/original/gziIkUSnYuj9ChCi8qOu2ZunpSC.jpg",
+        "reviews": {}
+    },
+    "39": {
+        "movie_id": "39",
+        "title": "Dog Day Afternoon",
+        "director": "Sidney Lumet",
+        "year": 1975,
+        "rating": null,
+        "description": "A man robs a bank to pay for his lover's operation, which turns into a hostage situation and a media circus.",
+        "poster_url": "https://image.tmdb.org/t/p/original/cS5aXrb6TreoGEQhiQePntUK5Gk.jpg",
+        "reviews": {}
+    },
+    "40": {
+        "movie_id": "40",
+        "title": "Your Name",
+        "director": "Makoto Shinkai",
+        "year": 2016,
+        "rating": null,
+        "description": "Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?",
+        "poster_url": "https://image.tmdb.org/t/p/original/q719jXXEzOoYaps6babgKnONONX.jpg",
+        "reviews": {}
+    }
 }
