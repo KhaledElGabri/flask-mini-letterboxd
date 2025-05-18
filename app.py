@@ -37,6 +37,7 @@ def home():
     if is_logged_in:
         user_auth_links = f'''
         <nav class="auth-links">
+            <a href="/user/profile" class="user-profile-nav">{user.username}</a>
             <a href="/user/logout" class="log-out" id="logout-btn">Logout</a>
         </nav>
         '''
