@@ -20,7 +20,7 @@ What is the "new feature" which you have implemented that we haven't seen before
   - Module name: datetime, json, os
 - [x] It contains at least one class written by you that has both properties and methods. It uses `__init__()` to let the class initialize the object's attributes (note that `__init__()` doesn't count as a method). This includes instantiating the class and using the methods in your app.
   - File name for the class definition: user.py
-  - Line number(s) for the class definition: 3-11
+  - Line number(s) for the class definition: 3-72
   - Name of two properties: username, user_id
   - Name of two methods: marked_movies, unmarked_movies
   - File name and line numbers where the methods are used: routes/movie_routes.py, lines 108-110
