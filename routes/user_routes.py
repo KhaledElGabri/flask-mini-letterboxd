@@ -28,14 +28,17 @@ def validate_username(username):
     
     if len(username) > 30:
         return "Username cannot exceed 30 characters"
-    
+
 
     if username.isdigit():
         return "Username cannot contain only numbers"
-    
+
     chars_count = sum(1 for char in username if char.isalpha())
     if chars_count < 3:
         return "Username must contain at least 3 alphabetic characters"
+    
+    if '@' in username and '.' in username.split('@')[1]:
+        return "Email addresses are not allowed as usernames. Please use a regular username."
     
     return None
 
