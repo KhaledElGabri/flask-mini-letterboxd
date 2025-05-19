@@ -64,7 +64,9 @@ def page_not_found(e):
 # prevent caching of response
 @app.after_request
 def prevent_cache_header(response):
-    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate"
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
     return response
 
 
