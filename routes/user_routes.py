@@ -37,13 +37,18 @@ def signup():
 
         users = load_users()
         username_exist = False
+        lowercase_username = username.lower()
+        
         for user in users:
-            if user.username == username:
+            if user.username.lower() == lowercase_username:
                 username_exist = True
                 break
 
         if username_exist:
-            return get_html("signup")
+            signup_html = get_html("signup")
+            signup_html = signup_html.replace('<p id="password-error" class="error-message" style="color: red; display: none;">',
+                                             f'<p id="password-error" class="error-message" style="color: red;">Username already exists. Please choose another one.</p>')
+            return signup_html
         else:
             new_user_id = User.generate_new_id(users)
             new_user = User(
@@ -76,15 +81,15 @@ def login():
             temp_user = User("temp", password, "")
             hashed_password = temp_user._hash_password_FNV1a_64(password)
 
-            if user.username == username and user.password == hashed_password:
-                session['username'] = username
+            if user.username.lower() == username.lower() and user.password == hashed_password:
+                session['username'] = user.username
                 session.permanent = True
-                user_logs(username, "logged in")
+                user_logs(user.username, "logged in")
 
                 # set LocalStorage before redirect
                 return f"""
                 <script>
-                    localStorage.setItem("username", "{username}");
+                    localStorage.setItem("username", "{user.username}");
                     window.location.href = "{url_for('home')}";
                 </script>
                 """
@@ -157,7 +162,7 @@ def user_profile_by_id(user_id):
 def find_user_by_username(username):
     users = load_users()
     for user in users:
-        if user.username == username:
+        if user.username.lower() == username.lower():
             return user
     return None
 

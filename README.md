@@ -2,8 +2,6 @@
 
 **A web Application that allows users to track movies they've watched and share reviews.**
 
----
-
 What does it do?
   - This is a web project which tracks movies users have watched and allows them to write reviews for each movie.
 
