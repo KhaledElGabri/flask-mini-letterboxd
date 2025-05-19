@@ -60,5 +60,13 @@ def home():
 def page_not_found(e):
     return get_html("not_found"), 404
 
+
+# prevent caching of response
+@app.after_request
+def prevent_cache_header(response):
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate"
+    return response
+
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -4,7 +4,7 @@ const welcomeMessage = document.querySelector(".welcome-message");
 const logoutButton = document.getElementById("logout-btn");
 const currentPath = window.location.pathname;
 
-
+// display a welcome message
 function showWelcomeMsg() {
     if (username && welcomeMessage) {
         if (!logoutButton) {
@@ -16,12 +16,7 @@ function showWelcomeMsg() {
     }
 }
 
-function handleBackBtn(event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-}
-
+// check username in localStorage
 function checkLogin() {
     if (storedUsername && !logoutButton) {
         localStorage.removeItem("username");
@@ -33,7 +28,5 @@ function checkLogin() {
     }
 }
 
-window.addEventListener('pageshow', handleBackBtn);
 window.addEventListener('DOMContentLoaded', checkLogin);
-
 showWelcomeMsg();
