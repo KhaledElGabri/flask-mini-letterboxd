@@ -23,13 +23,13 @@ What is the "new feature" which you have implemented that we haven't seen before
   - Line number(s) for the class definition: 3-11
   - Name of two properties: username, user_id
   - Name of two methods: marked_movies, unmarked_movies
-  - File name and line numbers where the methods are used: routes/movie_routes.py, lines 79-81
+  - File name and line numbers where the methods are used: routes/movie_routes.py, lines 108-110
 - [x] It makes use of JavaScript in the front end and uses the localStorage of the web browser.
 - [x] It uses modern JavaScript (for example, let and const rather than var).
 - [x] It makes use of the reading and writing to the same file feature.
 - [x] It contains conditional statements. Please provide below the file name and the line number(s) of at least one example of a conditional statement in your code.
   - File name: app.py
-  - Line number(s): 35-41
+  - Line number(s): 37-44
 - [x] It contains loops. Please provide below the file name and the line number(s) of at least one example of a loop in your code.
   - File name: user.py
   - Line number(s): 40-44

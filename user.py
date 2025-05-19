@@ -34,9 +34,9 @@ class User:
             del self.movie_watched[movie_id]
 
     # generate a new id
-    def generate_new_id(exist_user):
+    def generate_new_id(self):
         max_user_id = 0
-        for user in exist_user:
+        for user in self:
             if user.user_id and user.user_id.isdigit():
                 user_id_int = int(user.user_id)
                 if user_id_int > max_user_id:
