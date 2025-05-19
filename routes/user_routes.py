@@ -21,6 +21,25 @@ def validate_pass(password):
     return None
 
 
+# validate the username
+def validate_username(username):
+    if len(username) < 3:
+        return "Username must be at least 3 characters"
+    
+    if len(username) > 30:
+        return "Username cannot exceed 30 characters"
+    
+
+    if username.isdigit():
+        return "Username cannot contain only numbers"
+    
+    chars_count = sum(1 for char in username if char.isalpha())
+    if chars_count < 3:
+        return "Username must contain at least 3 alphabetic characters"
+    
+    return None
+
+
 # register new user
 @user_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -28,11 +47,20 @@ def signup():
         username = request.form['username']
         password = request.form['password']
 
+        # validate username
+        username_err = validate_username(username)
+        if username_err:
+            signup_html = get_html("signup")
+            signup_html = signup_html.replace('<p id="password-error" class="error-message" style="color: red; display: none;">',
+                                              f'<p id="password-error" class="error-message" style="color: red;">{username_err}</p>')
+            return signup_html
+
+        # validate password
         pass_err = validate_pass(password)
         if pass_err:
             signup_html = get_html("signup")
             signup_html = signup_html.replace('<p id="password-error" class="error-message" style="color: red; display: none;">',
-                                              f'<p id="password-error" class="error-message" style="color: red;">')
+                                              f'<p id="password-error" class="error-message" style="color: red;">{pass_err}</p>')
             return signup_html
 
         users = load_users()

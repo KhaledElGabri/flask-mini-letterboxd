@@ -22,28 +22,55 @@
 
 <script>
     function validateForm() {
+        const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const errorElement = document.getElementById('password-error');
+        
+        // username validation
+        if (username.length < 3) {
+            errorElement.textContent = "Username must be at least 3 characters";
+            errorElement.style.display = 'block';
+            return false;
+        }
+        
+        if (username.length > 30) {
+            errorElement.textContent = "Username cannot exceed 30 characters";
+            errorElement.style.display = 'block';
+            return false;
+        }
+        
+        if (/^\d+$/.test(username)) {
+            errorElement.textContent = "Username cannot contain only numbers";
+            errorElement.style.display = 'block';
+            return false;
+        }
+        
+        const charsCount = (username.match(/[a-zA-Z]/g) || []).length;
+        if (charsCount < 3) {
+            errorElement.textContent = "Username must contain at least 3 alphabetic characters";
+            errorElement.style.display = 'block';
+            return false;
+        }
 
-        // Check password length
+        // password validation
         if (password.length < 6) {
+            errorElement.textContent = "Password must be at least 6 characters";
             errorElement.style.display = 'block';
             return false;
         }
 
-        // Check for at least one number
         if (!/\d/.test(password)) {
+            errorElement.textContent = "Password must contain at least one number";
             errorElement.style.display = 'block';
             return false;
         }
 
-        // Check for at least one special character
         if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+            errorElement.textContent = "Password must contain at least one special character";
             errorElement.style.display = 'block';
             return false;
         }
 
-        // If we get here, validation passed
         errorElement.style.display = 'none';
         return true;
     }
