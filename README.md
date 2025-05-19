@@ -1,11 +1,13 @@
 # MINI LETTERBOXD
 
-A web application that allows users to track movies they've watched and share reviews.
+**A web Application that allows users to track movies they've watched and share reviews.**
 
-- What does it do?
+---
+
+What does it do?
   - This is a web project which tracks movies users have watched and allows them to write reviews for each movie.
 
-- What is the "new feature" which you have implemented that we haven't seen before?
+What is the "new feature" which you have implemented that we haven't seen before?
   - Movie tracking and a review system that allows users to create, edit, and delete their reviews.
 
 ## Prerequisites
