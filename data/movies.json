@@ -81,12 +81,12 @@
     },
     "9": {
         "movie_id": "9",
-        "title": "Before Sunrise",
-        "director": "Richard Linklater",
-        "year": 1995,
+        "title": "The Godfather Part II",
+        "director": "Francis Ford Coppola",
+        "year": 1974,
         "rating": null,
-        "description": "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
-        "poster_url": "https://image.tmdb.org/t/p/original/aZ2Vkrc4RqIjewYbmfy74oDgZfX.jpg",
+        "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+        "poster_url": "https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
         "reviews": {}
     },
     "10": {
@@ -121,14 +121,15 @@
     },
     "13": {
         "movie_id": "13",
-        "title": "Inception",
-        "director": "Christopher Nolan",
-        "year": 2010,
+        "title": "Fury",
+        "director": "David Ayer",
+        "year": 2014,
         "rating": null,
-        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-        "poster_url": "https://image.tmdb.org/t/p/original/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        "description": "A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945.",
+        "poster_url": "https://image.tmdb.org/t/p/original/8Kys68CN5EIObsU2jQYhYYtSYJ1.jpg",
         "reviews": {}
     },
+
     "14": {
         "movie_id": "14",
         "title": "Ratatouille",
@@ -201,12 +202,12 @@
     },
     "21": {
         "movie_id": "21",
-        "title": "The Godfather Part II",
-        "director": "Francis Ford Coppola",
-        "year": 1974,
+        "title": "Before Sunrise",
+        "director": "Richard Linklater",
+        "year": 1995,
         "rating": null,
-        "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
-        "poster_url": "https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+        "description": "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
+        "poster_url": "https://image.tmdb.org/t/p/original/aZ2Vkrc4RqIjewYbmfy74oDgZfX.jpg",
         "reviews": {}
     },
     "22": {
@@ -397,6 +398,207 @@
         "rating": null,
         "description": "Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?",
         "poster_url": "https://image.tmdb.org/t/p/original/q719jXXEzOoYaps6babgKnONONX.jpg",
+        "reviews": {}
+    },
+    "41": {
+        "movie_id": "41",
+        "title": "Insomnia",
+        "director": "Christopher Nolan",
+        "year": 2002,
+        "rating": null,
+        "description": "Two Los Angeles homicide detectives are dispatched to a northern town where the sun doesn't set to investigate the methodical murder of a local teen.",
+        "poster_url": "https://image.tmdb.org/t/p/original/riVXh3EimGO0y5dgQxEWPRy5Itg.jpg",
+        "reviews": {}
+    },
+    "42": {
+        "movie_id": "42",
+        "title": "John Wick",
+        "director": "Chad Stahelski",
+        "year": 2014,
+        "rating": null,
+        "description": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+        "poster_url": "https://image.tmdb.org/t/p/original/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg",
+        "reviews": {}
+    },
+    "43": {
+        "movie_id": "43",
+        "title": "Monsters, Inc.",
+        "director": "Pete Docter",
+        "year": 2001,
+        "rating": null,
+        "description": "In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.",
+        "poster_url": "https://image.tmdb.org/t/p/original/sgheSKxZkttIe8ONsf2sWXPgip3.jpg",
+        "reviews": {}
+    },
+    "44": {
+        "movie_id": "44",
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "director": "Alfonso Cuarón",
+        "year": 2004,
+        "rating": null,
+        "description": "Harry, Ron and Hermione return to Hogwarts for another magic-filled year. Harry comes face to face with danger yet again, this time in the form of escaped convict, Sirius Black.",
+        "poster_url": "https://image.tmdb.org/t/p/original/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+        "reviews": {}
+    },
+    "45": {
+        "movie_id": "45",
+        "title": "Spirit: Stallion of the Cimarron",
+        "director": "Kelly Asbury, Lorna Cook",
+        "year": 2002,
+        "rating": null,
+        "description": "As a wild stallion travels across the frontiers of the Old West, he befriends a young human and finds true love with a mare.",
+        "poster_url": "https://image.tmdb.org/t/p/original/cUgYrz4twiJ3QgVGpRfey984NIB.jpg",
+        "reviews": {}
+    },
+    "46": {
+        "movie_id": "46",
+        "title": "The Shawshank Redemption",
+        "director": "Frank Darabont",
+        "year": 1994,
+        "rating": null,
+        "description": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison.",
+        "poster_url": "https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+        "reviews": {}
+    },
+    "47": {
+        "movie_id": "47",
+        "title": "Léon: The Professional",
+        "director": "Luc Besson",
+        "year": 1994,
+        "rating": null,
+        "description": "Léon, the top hit man in New York, has earned a rep as an effective cleaner. But after his next-door neighbors are wiped out by a loose-cannon DEA agent.",
+        "poster_url": "https://image.tmdb.org/t/p/original/yI6X2cCM5YPJtxMhUd3dPGqDAhw.jpg",
+        "reviews": {}
+    },
+    "48": {
+        "movie_id": "48",
+        "title": "Ronin",
+        "director": "John Frankenheimer",
+        "year": 1998,
+        "rating": null,
+        "description": "A freelancing former U.S. Intelligence Agent tries to track down a mysterious package that is wanted by the Irish and the Russians.",
+        "poster_url": "https://image.tmdb.org/t/p/original/AirrhRJjHwytOV0pdLu7YZ4DEyr.jpg",
+        "reviews": {}
+    },
+    "49": {
+        "movie_id": "49",
+        "title": "Shutter Island",
+        "director": "Martin Scorsese",
+        "year": 2010,
+        "rating": null,
+        "description": "World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane.",
+        "poster_url": "https://image.tmdb.org/t/p/original/4GDy0PHYX3VRXUtwK5ysFbg3kEx.jpg",
+        "reviews": {}
+    },
+    "50": {
+        "movie_id": "50",
+        "title": "Django Unchained",
+        "director": "Quentin Tarantino",
+        "year": 2012,
+        "rating": null,
+        "description": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+        "poster_url": "https://image.tmdb.org/t/p/original/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+        "reviews": {}
+    },
+    "51": {
+        "movie_id": "51",
+        "title": "The Revenant",
+        "director": "Alejandro G. Iñárritu",
+        "year": 2015,
+        "rating": null,
+        "description": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+        "poster_url": "https://image.tmdb.org/t/p/original/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
+        "reviews": {}
+    },
+    "52": {
+        "movie_id": "52",
+        "title": "Inside Out",
+        "director": "Pete Docter",
+        "year": 2015,
+        "rating": null,
+        "description": "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
+        "poster_url": "https://image.tmdb.org/t/p/original/lRHE0vzf3oYJrhbsHXjIkF4Tl5A.jpg",
+        "reviews": {}
+    },
+    "53": {
+        "movie_id": "53",
+        "title": "Hacksaw Ridge",
+        "director": "Mel Gibson",
+        "year": 2016,
+        "rating": null,
+        "description": "WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first Conscientious Objector in American history to receive the Congressional Medal of Honor.",
+        "poster_url": "https://image.tmdb.org/t/p/original/v2z5OVPxlGhAAIqvCQnQVH39sG.jpg",
+        "reviews": {}
+    },
+    "54": {
+        "movie_id": "54",
+        "title": "The Great Gatsby",
+        "director": "Baz Luhrmann",
+        "year": 2013,
+        "rating": null,
+        "description": "A writer and wall street trader, Nick Carraway, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.",
+        "poster_url": "https://image.tmdb.org/t/p/original/tyxfCBQv6Ap74jcu3xd7aBiaa29.jpg",
+        "reviews": {}
+    },
+    "55": {
+        "movie_id": "55",
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "rating": null,
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "poster_url": "https://image.tmdb.org/t/p/original/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        "reviews": {}
+    },
+
+    "56": {
+        "movie_id": "56",
+        "title": "The Batman",
+        "director": "Matt Reeves",
+        "year": 2022,
+        "rating": null,
+        "description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+        "poster_url": "https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+        "reviews": {}
+    },
+    "57": {
+        "movie_id": "57",
+        "title": "Little Miss Sunshine",
+        "director": "Jonathan Dayton, Valerie Faris",
+        "year": 2006,
+        "rating": null,
+        "description": "A family determined to get their young daughter into the finals of a beauty pageant take a cross-country trip in their VW bus.",
+        "poster_url": "https://image.tmdb.org/t/p/original/tFnTds88mCuLcLPBseK1kF2E3qv.jpg",
+        "reviews": {}
+    },
+    "58": {
+        "movie_id": "58",
+        "title": "Beautiful Boy",
+        "director": "Felix Van Groeningen",
+        "year": 2018,
+        "rating": null,
+        "description": "A father's desperate attempts to help his son overcome his methamphetamine addiction.",
+        "poster_url": "https://image.tmdb.org/t/p/original/u2Gfv0mz3xePsgyCPHovrnFL1sB.jpg",
+        "reviews": {}
+    },
+    "59": {
+        "movie_id": "59",
+        "title": "The Big Short",
+        "director": "Adam McKay",
+        "year": 2015,
+        "rating": null,
+        "description": "Four denizens in the world of high-finance predict the credit and housing bubble collapse of the mid-2000s, and decide to take on the big banks for their greed and lack of foresight.",
+        "poster_url": "https://image.tmdb.org/t/p/original/isuQWbJPbjybBEWdcCaBUPmU0XO.jpg",
+        "reviews": {}
+    },
+    "60": {
+        "movie_id": "60",
+        "title": "The Nice Guys",
+        "director": "Shane Black",
+        "year": 2016,
+        "rating": null,
+        "description": "A private eye investigates the apparent suicide of a fading porn star in 1970s Los Angeles and uncovers a conspiracy.",
+        "poster_url": "https://image.tmdb.org/t/p/original/uXdQztKoAtx7UU3RvqeF52KsoQP.jpg",
         "reviews": {}
     }
 }
